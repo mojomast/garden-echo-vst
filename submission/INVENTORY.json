@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "version": "0.2.0",
+  "musicalCount": 15,
+  "selectableCount": 16,
+  "bankManifestSha256": "7f8bcf2ee968ede7445ac5ae205fb94ab3ba374b1f7e0556ab97668d83c6be27",
+  "parameters": {
+    "space": {
+      "version": 1,
+      "values": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "default": 0
+    },
+    "study": {
+      "version": 1,
+      "values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "default": 0
+    },
+    "orderedHostIds": [
+      "space",
+      "wet",
+      "predelay",
+      "trim",
+      "bypass",
+      "study",
+      "studyTime",
+      "studyFeedback",
+      "studyColour",
+      "studyMotion"
+    ],
+    "defaults": {
+      "wet": 0.42,
+      "predelayMs": 18,
+      "trimDb": 0,
+      "bypass": false,
+      "studyTime": 0.5,
+      "studyFeedback": 0.5,
+      "studyColour": 0.5,
+      "studyMotion": 0.5
+    }
+  },
+  "choices": [
+    {
+      "id": "leaf-chamber",
+      "name": "Leaf Chamber",
+      "category": "Recorded spaces",
+      "space": 0,
+      "study": 0,
+      "kernelSha256": "2318c94161fc9260b527fd7699385b39f6e1ab2ceaeab7532a4033285a885a57"
+    },
+    {
+      "id": "moss-arcade",
+      "name": "Moss Arcade",
+      "category": "Recorded spaces",
+      "space": 1,
+      "study": 0,
+      "kernelSha256": "c5cd94b2603c5601dae5208e17380ea75190e945d09b08e0d72e65a2f0d58ebb"
+    },
+    {
+      "id": "rain-canopy",
+      "name": "Rain Canopy",
+      "category": "Recorded spaces",
+      "space": 2,
+      "study": 0,
+      "kernelSha256": "8a1d994184a11afe7cf6cbe16df5781a79d674db797f6152a3e995648bb68f70"
+    },
+    {
+      "id": "terrace",
+      "name": "Terrace Multitap",
+      "category": "Repeats & rhythm",
+      "space": null,
+      "study": 1
+    },
+    {
+      "id": "crossing",
+      "name": "Crossing Ping-Pong",
+      "category": "Repeats & rhythm",
+      "space": null,
+      "study": 2
+    },
+    {
+      "id": "amber",
+      "name": "Amber Dub",
+      "category": "Repeats & rhythm",
+      "space": null,
+      "study": 3
+    },
+    {
+      "id": "petal",
+      "name": "Petal Chorus",
+      "category": "Moving & widening",
+      "space": null,
+      "study": 4
+    },
+    {
+      "id": "canopy",
+      "name": "Canopy Ensemble",
+      "category": "Moving & widening",
+      "space": null,
+      "study": 5
+    },
+    {
+      "id": "ribbon",
+      "name": "Ribbon Flanger",
+      "category": "Moving & widening",
+      "space": null,
+      "study": 6
+    },
+    {
+      "id": "wire",
+      "name": "Wire Resonator",
+      "category": "Tone & resonance",
+      "space": null,
+      "study": 7
+    },
+    {
+      "id": "mist",
+      "name": "Mist Diffuser",
+      "category": "Texture & pulse",
+      "space": null,
+      "study": 8
+    },
+    {
+      "id": "lantern",
+      "name": "Lantern Tremolo Echo",
+      "category": "Texture & pulse",
+      "space": null,
+      "study": 9
+    },
+    {
+      "id": "brook",
+      "name": "Brook Filter Sweep",
+      "category": "Tone & resonance",
+      "space": null,
+      "study": 10
+    },
+    {
+      "id": "prism",
+      "name": "Prism Stereo Doubler",
+      "category": "Moving & widening",
+      "space": null,
+      "study": 11
+    },
+    {
+      "id": "steps",
+      "name": "Steps Rhythmic Taps",
+      "category": "Repeats & rhythm",
+      "space": null,
+      "study": 12
+    },
+    {
+      "id": "unit-impulse",
+      "name": "Unit impulse / diagnostic",
+      "category": "Diagnostic",
+      "space": 3,
+      "study": 0
+    }
+  ]
+}

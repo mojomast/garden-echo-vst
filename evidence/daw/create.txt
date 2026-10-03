@@ -1,0 +1,14 @@
+scan=VST3: Garden Echo (Moth Garden)
+loaded=VST3: Garden Echo (Moth Garden)
+parameter[0]=Space
+parameter[1]=Wet
+parameter[2]=Predelay
+parameter[3]=Output trim
+parameter[4]=Bypass
+parameter[5]=Bypass
+parameter[6]=Bypass
+parameter[7]=Wet
+parameter[8]=Delta
+saved=/workspace/moth-garden-echo/evidence/daw/garden-host-smoke.rpp
+playing=1
+playback_stop=0

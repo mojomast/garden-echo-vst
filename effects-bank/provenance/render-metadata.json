@@ -1,0 +1,463 @@
+{
+  "schemaVersion": 1,
+  "effects": [
+    {
+      "id": "terrace",
+      "name": "Terrace Multitap",
+      "family": "Multitap",
+      "description": "Sparse early-reflection delay",
+      "atlasRole": "OTOC measured complex trajectory and linked Retro 22.05 kHz float WAV for bloom provide six signed stereo 128-frame onset sums. Both Blur Core 16-step fields guide bounded controls; fields cycle as envelopes in studies 9/10. Classical local DSP, not remote processing of music. Prism's dense phase-mode WAV is NOT fully convolved or represented as a literal six-tap IR.",
+      "localProcessing": "Native classical DSP study: sparse early-reflection delay; wet/dry 0.55, predelay 0 ms, SAME +4 dB audition trim on every wet render (dry cues untrimmed). Four-second cues include tails; no per-effect/file normalization. Dry/wet loudness only approximately matched.",
+      "parameters": {
+        "studyIndex": 1,
+        "wet": 0.55,
+        "predelayMs": 0,
+        "trimDb": 4,
+        "auditionGainDb": 4
+      },
+      "sourceRunIds": [
+        "effects-measure-bloom",
+        "effects-render-bloom",
+        "effects-field-filter",
+        "effects-field-rhythm"
+      ],
+      "renders": [
+        {
+          "sourceId": "drum",
+          "path": "terrace-drum.wav",
+          "sha256": "a22aac45b567b8fbf1e4d9b5169334eaac2285eb88673236d1a23eced12cc207"
+        },
+        {
+          "sourceId": "pluck",
+          "path": "terrace-pluck.wav",
+          "sha256": "037fda6571598d2db82939295d6274348d321fed63ccb675fa831732ebdd3b18"
+        },
+        {
+          "sourceId": "chord",
+          "path": "terrace-chord.wav",
+          "sha256": "530b9ecf3d2b5a76523747de23c3de02d63ba1e6304bfd138738753bb09aa1c9"
+        }
+      ]
+    },
+    {
+      "id": "crossing",
+      "name": "Crossing Ping-Pong",
+      "family": "Ping-Pong",
+      "description": "Cross-coupled stereo repeats",
+      "atlasRole": "OTOC measured complex trajectory and linked Retro 22.05 kHz float WAV for prism provide six signed stereo 128-frame onset sums. Both Blur Core 16-step fields guide bounded controls; fields cycle as envelopes in studies 9/10. Classical local DSP, not remote processing of music. Prism's dense phase-mode WAV is NOT fully convolved or represented as a literal six-tap IR.",
+      "localProcessing": "Native classical DSP study: cross-coupled stereo repeats; wet/dry 0.55, predelay 0 ms, SAME +4 dB audition trim on every wet render (dry cues untrimmed). Four-second cues include tails; no per-effect/file normalization. Dry/wet loudness only approximately matched.",
+      "parameters": {
+        "studyIndex": 2,
+        "wet": 0.55,
+        "predelayMs": 0,
+        "trimDb": 4,
+        "auditionGainDb": 4
+      },
+      "sourceRunIds": [
+        "effects-measure-prism",
+        "effects-render-prism",
+        "effects-field-filter",
+        "effects-field-rhythm"
+      ],
+      "renders": [
+        {
+          "sourceId": "drum",
+          "path": "crossing-drum.wav",
+          "sha256": "1ed84d01000a980939501350c853609232e0c36011f878877312819edaa15595"
+        },
+        {
+          "sourceId": "pluck",
+          "path": "crossing-pluck.wav",
+          "sha256": "8e8eecf301a5fa4c43c4c3a4932123ab97c5ff8c07fe54c7ef3f06f7f2b0085a"
+        },
+        {
+          "sourceId": "chord",
+          "path": "crossing-chord.wav",
+          "sha256": "a21d5d6607013ed75f34f4737ce25a476b5d0e0560ef0748f384d5efc6df4284"
+        }
+      ]
+    },
+    {
+      "id": "amber",
+      "name": "Amber Dub",
+      "family": "Dub Delay",
+      "description": "Dark low-pass feedback echo",
+      "atlasRole": "OTOC measured complex trajectory and linked Retro 22.05 kHz float WAV for fracture provide six signed stereo 128-frame onset sums. Both Blur Core 16-step fields guide bounded controls; fields cycle as envelopes in studies 9/10. Classical local DSP, not remote processing of music. Prism's dense phase-mode WAV is NOT fully convolved or represented as a literal six-tap IR.",
+      "localProcessing": "Native classical DSP study: dark low-pass feedback echo; wet/dry 0.55, predelay 0 ms, SAME +4 dB audition trim on every wet render (dry cues untrimmed). Four-second cues include tails; no per-effect/file normalization. Dry/wet loudness only approximately matched.",
+      "parameters": {
+        "studyIndex": 3,
+        "wet": 0.55,
+        "predelayMs": 0,
+        "trimDb": 4,
+        "auditionGainDb": 4
+      },
+      "sourceRunIds": [
+        "effects-measure-fracture",
+        "effects-render-fracture",
+        "effects-field-filter",
+        "effects-field-rhythm"
+      ],
+      "renders": [
+        {
+          "sourceId": "drum",
+          "path": "amber-drum.wav",
+          "sha256": "41347f198b1735cd6ecad017c46972e48696926a26054fcc17982ee9f7de3dc9"
+        },
+        {
+          "sourceId": "pluck",
+          "path": "amber-pluck.wav",
+          "sha256": "b96901ef4f9ef506225d3fd2cdfd9d428219b5b499cececd744397b75929d1e6"
+        },
+        {
+          "sourceId": "chord",
+          "path": "amber-chord.wav",
+          "sha256": "0d375320753156f03704da69545903e027c698bf9e0a1d8e7f6a5a9378b74764"
+        }
+      ]
+    },
+    {
+      "id": "petal",
+      "name": "Petal Chorus",
+      "family": "Chorus",
+      "description": "Short quadrature modulated delay",
+      "atlasRole": "OTOC measured complex trajectory and linked Retro 22.05 kHz float WAV for bloom provide six signed stereo 128-frame onset sums. Both Blur Core 16-step fields guide bounded controls; fields cycle as envelopes in studies 9/10. Classical local DSP, not remote processing of music. Prism's dense phase-mode WAV is NOT fully convolved or represented as a literal six-tap IR.",
+      "localProcessing": "Native classical DSP study: short quadrature modulated delay; wet/dry 0.55, predelay 0 ms, SAME +4 dB audition trim on every wet render (dry cues untrimmed). Four-second cues include tails; no per-effect/file normalization. Dry/wet loudness only approximately matched.",
+      "parameters": {
+        "studyIndex": 4,
+        "wet": 0.55,
+        "predelayMs": 0,
+        "trimDb": 4,
+        "auditionGainDb": 4
+      },
+      "sourceRunIds": [
+        "effects-measure-bloom",
+        "effects-render-bloom",
+        "effects-field-filter",
+        "effects-field-rhythm"
+      ],
+      "renders": [
+        {
+          "sourceId": "drum",
+          "path": "petal-drum.wav",
+          "sha256": "c7f5bbd462d5179a44cd02a1aee33291406c9ff80a8bda3b7175585610c43c5e"
+        },
+        {
+          "sourceId": "pluck",
+          "path": "petal-pluck.wav",
+          "sha256": "9d96e20f8f7fb2d4cc4f7f6c323b3b728184e27ced1cb2ea1cc21437d43f98b1"
+        },
+        {
+          "sourceId": "chord",
+          "path": "petal-chord.wav",
+          "sha256": "90aa7b9a2e989a3c84115dcada88b604739d5b42ef24f38cb8aa2cacf884377f"
+        }
+      ]
+    },
+    {
+      "id": "canopy",
+      "name": "Canopy Ensemble",
+      "family": "Ensemble",
+      "description": "Three detuned delay voices",
+      "atlasRole": "OTOC measured complex trajectory and linked Retro 22.05 kHz float WAV for prism provide six signed stereo 128-frame onset sums. Both Blur Core 16-step fields guide bounded controls; fields cycle as envelopes in studies 9/10. Classical local DSP, not remote processing of music. Prism's dense phase-mode WAV is NOT fully convolved or represented as a literal six-tap IR.",
+      "localProcessing": "Native classical DSP study: three detuned delay voices; wet/dry 0.55, predelay 0 ms, SAME +4 dB audition trim on every wet render (dry cues untrimmed). Four-second cues include tails; no per-effect/file normalization. Dry/wet loudness only approximately matched.",
+      "parameters": {
+        "studyIndex": 5,
+        "wet": 0.55,
+        "predelayMs": 0,
+        "trimDb": 4,
+        "auditionGainDb": 4
+      },
+      "sourceRunIds": [
+        "effects-measure-prism",
+        "effects-render-prism",
+        "effects-field-filter",
+        "effects-field-rhythm"
+      ],
+      "renders": [
+        {
+          "sourceId": "drum",
+          "path": "canopy-drum.wav",
+          "sha256": "ab9597d1c6cdb41a443b2636e57be1ec1d6e647eee523537dc0a72c54456ded0"
+        },
+        {
+          "sourceId": "pluck",
+          "path": "canopy-pluck.wav",
+          "sha256": "fdaa6d27328fdc73e245cb1d2093589bb19076fcc6c29c25fa07b8d7d51eef97"
+        },
+        {
+          "sourceId": "chord",
+          "path": "canopy-chord.wav",
+          "sha256": "395595293179e49522061e63d5f68f24de51006460cde3a1b390b7c643d65c9a"
+        }
+      ]
+    },
+    {
+      "id": "ribbon",
+      "name": "Ribbon Flanger",
+      "family": "Flanger",
+      "description": "Short swept feedback comb",
+      "atlasRole": "OTOC measured complex trajectory and linked Retro 22.05 kHz float WAV for fracture provide six signed stereo 128-frame onset sums. Both Blur Core 16-step fields guide bounded controls; fields cycle as envelopes in studies 9/10. Classical local DSP, not remote processing of music. Prism's dense phase-mode WAV is NOT fully convolved or represented as a literal six-tap IR.",
+      "localProcessing": "Native classical DSP study: short swept feedback comb; wet/dry 0.55, predelay 0 ms, SAME +4 dB audition trim on every wet render (dry cues untrimmed). Four-second cues include tails; no per-effect/file normalization. Dry/wet loudness only approximately matched.",
+      "parameters": {
+        "studyIndex": 6,
+        "wet": 0.55,
+        "predelayMs": 0,
+        "trimDb": 4,
+        "auditionGainDb": 4
+      },
+      "sourceRunIds": [
+        "effects-measure-fracture",
+        "effects-render-fracture",
+        "effects-field-filter",
+        "effects-field-rhythm"
+      ],
+      "renders": [
+        {
+          "sourceId": "drum",
+          "path": "ribbon-drum.wav",
+          "sha256": "af88a38f7a2bef651f5dfad1be8eb908fe6d622cd7b3c635d42c260b894c8e41"
+        },
+        {
+          "sourceId": "pluck",
+          "path": "ribbon-pluck.wav",
+          "sha256": "f79219336eef172f1fa1639dca3a9755a094255634342108645d9de5110028a8"
+        },
+        {
+          "sourceId": "chord",
+          "path": "ribbon-chord.wav",
+          "sha256": "475d339a2afac43665625eaca951243d77ebd895f903abf82f446255554e12ed"
+        }
+      ]
+    },
+    {
+      "id": "wire",
+      "name": "Wire Resonator",
+      "family": "Resonator",
+      "description": "Tuned damped comb resonance",
+      "atlasRole": "OTOC measured complex trajectory and linked Retro 22.05 kHz float WAV for bloom provide six signed stereo 128-frame onset sums. Both Blur Core 16-step fields guide bounded controls; fields cycle as envelopes in studies 9/10. Classical local DSP, not remote processing of music. Prism's dense phase-mode WAV is NOT fully convolved or represented as a literal six-tap IR.",
+      "localProcessing": "Native classical DSP study: tuned damped comb resonance; wet/dry 0.55, predelay 0 ms, SAME +4 dB audition trim on every wet render (dry cues untrimmed). Four-second cues include tails; no per-effect/file normalization. Dry/wet loudness only approximately matched.",
+      "parameters": {
+        "studyIndex": 7,
+        "wet": 0.55,
+        "predelayMs": 0,
+        "trimDb": 4,
+        "auditionGainDb": 4
+      },
+      "sourceRunIds": [
+        "effects-measure-bloom",
+        "effects-render-bloom",
+        "effects-field-filter",
+        "effects-field-rhythm"
+      ],
+      "renders": [
+        {
+          "sourceId": "drum",
+          "path": "wire-drum.wav",
+          "sha256": "9e9ca5cc88db120be2bcba99ef157075ad341e67a9f3d6c4485df2495207770a"
+        },
+        {
+          "sourceId": "pluck",
+          "path": "wire-pluck.wav",
+          "sha256": "6427bcc3ac9683fcb42ded5e6f56e923823321dbfd8982f29e8c454b76b16458"
+        },
+        {
+          "sourceId": "chord",
+          "path": "wire-chord.wav",
+          "sha256": "784f2aff9c877f6e64b2f3ba986538f6fd43e315aeb55ec90db6ac197d62aedd"
+        }
+      ]
+    },
+    {
+      "id": "mist",
+      "name": "Mist Diffuser",
+      "family": "Diffusion",
+      "description": "Cascaded stereo all-pass dispersion",
+      "atlasRole": "OTOC measured complex trajectory and linked Retro 22.05 kHz float WAV for prism provide six signed stereo 128-frame onset sums. Both Blur Core 16-step fields guide bounded controls; fields cycle as envelopes in studies 9/10. Classical local DSP, not remote processing of music. Prism's dense phase-mode WAV is NOT fully convolved or represented as a literal six-tap IR.",
+      "localProcessing": "Native classical DSP study: cascaded stereo all-pass dispersion; wet/dry 0.55, predelay 0 ms, SAME +4 dB audition trim on every wet render (dry cues untrimmed). Four-second cues include tails; no per-effect/file normalization. Dry/wet loudness only approximately matched.",
+      "parameters": {
+        "studyIndex": 8,
+        "wet": 0.55,
+        "predelayMs": 0,
+        "trimDb": 4,
+        "auditionGainDb": 4
+      },
+      "sourceRunIds": [
+        "effects-measure-prism",
+        "effects-render-prism",
+        "effects-field-filter",
+        "effects-field-rhythm"
+      ],
+      "renders": [
+        {
+          "sourceId": "drum",
+          "path": "mist-drum.wav",
+          "sha256": "13065b44c471bf2a6539250274533e1a06a0db046a8d46a83e7b09bbfb932a55"
+        },
+        {
+          "sourceId": "pluck",
+          "path": "mist-pluck.wav",
+          "sha256": "f4d4a3802071d224d018a357c2079f63c993f01e2cfe1e0c2864caa61109dba8"
+        },
+        {
+          "sourceId": "chord",
+          "path": "mist-chord.wav",
+          "sha256": "712c69f491336db7254689443f365c1634e7e1c6de4254ec507f2497cefd8cfa"
+        }
+      ]
+    },
+    {
+      "id": "lantern",
+      "name": "Lantern Tremolo Echo",
+      "family": "Tremolo Echo",
+      "description": "Opposed stereo amplitude pulses",
+      "atlasRole": "OTOC measured complex trajectory and linked Retro 22.05 kHz float WAV for fracture provide six signed stereo 128-frame onset sums. Both Blur Core 16-step fields guide bounded controls; fields cycle as envelopes in studies 9/10. Classical local DSP, not remote processing of music. Prism's dense phase-mode WAV is NOT fully convolved or represented as a literal six-tap IR.",
+      "localProcessing": "Native classical DSP study: opposed stereo amplitude pulses; wet/dry 0.55, predelay 0 ms, SAME +4 dB audition trim on every wet render (dry cues untrimmed). Four-second cues include tails; no per-effect/file normalization. Dry/wet loudness only approximately matched.",
+      "parameters": {
+        "studyIndex": 9,
+        "wet": 0.55,
+        "predelayMs": 0,
+        "trimDb": 4,
+        "auditionGainDb": 4
+      },
+      "sourceRunIds": [
+        "effects-measure-fracture",
+        "effects-render-fracture",
+        "effects-field-filter",
+        "effects-field-rhythm"
+      ],
+      "renders": [
+        {
+          "sourceId": "drum",
+          "path": "lantern-drum.wav",
+          "sha256": "2a943bd4b1da683f01ccd76bc14e022831b42e04f175d2fa06eb5e762e55a867"
+        },
+        {
+          "sourceId": "pluck",
+          "path": "lantern-pluck.wav",
+          "sha256": "9b9a73815e9dad5880ec1af8e814ed35d868af5b6a21b7bff4307635f905b365"
+        },
+        {
+          "sourceId": "chord",
+          "path": "lantern-chord.wav",
+          "sha256": "975f64bc38873bfd0187f4d1acb27cbbcca8338f326f15f668c68290997033cf"
+        }
+      ]
+    },
+    {
+      "id": "brook",
+      "name": "Brook Filter Sweep",
+      "family": "Filter Echo",
+      "description": "Field-driven low-pass motion with short echo",
+      "atlasRole": "OTOC measured complex trajectory and linked Retro 22.05 kHz float WAV for bloom provide six signed stereo 128-frame onset sums. Both Blur Core 16-step fields guide bounded controls; fields cycle as envelopes in studies 9/10. Classical local DSP, not remote processing of music. Prism's dense phase-mode WAV is NOT fully convolved or represented as a literal six-tap IR.",
+      "localProcessing": "Native classical DSP study: field-driven low-pass motion with short echo; wet/dry 0.55, predelay 0 ms, SAME +4 dB audition trim on every wet render (dry cues untrimmed). Four-second cues include tails; no per-effect/file normalization. Dry/wet loudness only approximately matched.",
+      "parameters": {
+        "studyIndex": 10,
+        "wet": 0.55,
+        "predelayMs": 0,
+        "trimDb": 4,
+        "auditionGainDb": 4
+      },
+      "sourceRunIds": [
+        "effects-measure-bloom",
+        "effects-render-bloom",
+        "effects-field-filter",
+        "effects-field-rhythm"
+      ],
+      "renders": [
+        {
+          "sourceId": "drum",
+          "path": "brook-drum.wav",
+          "sha256": "0334ca3edcaa428c0e146d0a966ca0ce41e9217b9030a72fc79a7e7cd503f5fa"
+        },
+        {
+          "sourceId": "pluck",
+          "path": "brook-pluck.wav",
+          "sha256": "f5d655f5bea1a6ad35aba25efd92ac9a03b9624183612835e540bfbf597805c7"
+        },
+        {
+          "sourceId": "chord",
+          "path": "brook-chord.wav",
+          "sha256": "050f40e399ca0ba72efb93319d7556ace0a39eada894dc3d96fbf1e10be22bba"
+        }
+      ]
+    },
+    {
+      "id": "prism",
+      "name": "Prism Stereo Doubler",
+      "family": "Doubler",
+      "description": "Asymmetric short stereo delays",
+      "atlasRole": "OTOC measured complex trajectory and linked Retro 22.05 kHz float WAV for prism provide six signed stereo 128-frame onset sums. Both Blur Core 16-step fields guide bounded controls; fields cycle as envelopes in studies 9/10. Classical local DSP, not remote processing of music. Prism's dense phase-mode WAV is NOT fully convolved or represented as a literal six-tap IR.",
+      "localProcessing": "Native classical DSP study: asymmetric short stereo delays; wet/dry 0.55, predelay 0 ms, SAME +4 dB audition trim on every wet render (dry cues untrimmed). Four-second cues include tails; no per-effect/file normalization. Dry/wet loudness only approximately matched.",
+      "parameters": {
+        "studyIndex": 11,
+        "wet": 0.55,
+        "predelayMs": 0,
+        "trimDb": 4,
+        "auditionGainDb": 4
+      },
+      "sourceRunIds": [
+        "effects-measure-prism",
+        "effects-render-prism",
+        "effects-field-filter",
+        "effects-field-rhythm"
+      ],
+      "renders": [
+        {
+          "sourceId": "drum",
+          "path": "prism-drum.wav",
+          "sha256": "88d50ab099f1ef0fbd055743ab2eb9ba5d1cb95cbffd1f6456ddcf8297db8943"
+        },
+        {
+          "sourceId": "pluck",
+          "path": "prism-pluck.wav",
+          "sha256": "94904524620615756a12357a214fb4882f7623dc91fd6d4aeb79e90eb6e704ce"
+        },
+        {
+          "sourceId": "chord",
+          "path": "prism-chord.wav",
+          "sha256": "5deaf302082dc6a6e4034646a8fd010adc91d7c39679a86a3e613a23f193e6f5"
+        }
+      ]
+    },
+    {
+      "id": "steps",
+      "name": "Steps Rhythmic Taps",
+      "family": "Rhythmic Delay",
+      "description": "Signed syncopated delay pattern",
+      "atlasRole": "OTOC measured complex trajectory and linked Retro 22.05 kHz float WAV for fracture provide six signed stereo 128-frame onset sums. Both Blur Core 16-step fields guide bounded controls; fields cycle as envelopes in studies 9/10. Classical local DSP, not remote processing of music. Prism's dense phase-mode WAV is NOT fully convolved or represented as a literal six-tap IR.",
+      "localProcessing": "Native classical DSP study: signed syncopated delay pattern; wet/dry 0.55, predelay 0 ms, SAME +4 dB audition trim on every wet render (dry cues untrimmed). Four-second cues include tails; no per-effect/file normalization. Dry/wet loudness only approximately matched.",
+      "parameters": {
+        "studyIndex": 12,
+        "wet": 0.55,
+        "predelayMs": 0,
+        "trimDb": 4,
+        "auditionGainDb": 4
+      },
+      "sourceRunIds": [
+        "effects-measure-fracture",
+        "effects-render-fracture",
+        "effects-field-filter",
+        "effects-field-rhythm"
+      ],
+      "renders": [
+        {
+          "sourceId": "drum",
+          "path": "steps-drum.wav",
+          "sha256": "7e76939dc68b9b1d38a6f0a04ab9e497da1c1ae081a0a1e73b41c939594b9711"
+        },
+        {
+          "sourceId": "pluck",
+          "path": "steps-pluck.wav",
+          "sha256": "60eeaf5043ef727043c81006f84afdd887866a086d501a52fcaadeef8677500e"
+        },
+        {
+          "sourceId": "chord",
+          "path": "steps-chord.wav",
+          "sha256": "e28fd6efd5a7a4b862979a78486377a2edacc7d6c642d104da2e59446b9395e3"
+        }
+      ]
+    }
+  ],
+  "renderOrigin": "experimental-native-plugin",
+  "renderImplementation": "GardenBankRender executable sha256:d7abc05c5e5a2430bcc460609f85b4ef9fe80049ce19318cabcd793816c000fe; generated AtlasStudyData.h sha256:f0ace36b6bb32a051987d7c89c3d09a6f945444d0d4acbbc036c0cfaf4e9f1a5; native EffectCore.h sha256:16831d39c84823fc861813bef63d8d5a56ff8a8e740ff024d830e0df0bb29060; AtlasStudyPresets.h sha256:1aadd6318e221e06743b3e3faa9ffc0eeb165e518f3afa46b379b3c52a8d6730; PluginProcessor.cpp sha256:ee26e98aad50407891ac77045dff977af7d8e33dba57ea204ee51cf20d9e0eac"
+}

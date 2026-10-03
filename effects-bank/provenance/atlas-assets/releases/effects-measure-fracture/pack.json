@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "id": "effects-measure-fracture",
+  "producer": "moth-hackathon-2026@4e7afa79260a478ee598f215649af1367684a0bb",
+  "evidenceMode": "atlas-live",
+  "mothbakeCommit": "b36ac00286f63c3ee4d57a632fb8909c2d189f72",
+  "assets": [
+    {
+      "id": "inline-result",
+      "role": "result",
+      "path": "assets/inline-result.json",
+      "mime": "application/json",
+      "sha256": "9e8890cb2c15195b945800ec7a527e191d13025669ff24e1a46b96027f82c58e",
+      "sourceRunIds": [
+        "effects-measure-fracture"
+      ]
+    }
+  ],
+  "runs": [
+    {
+      "id": "effects-measure-fracture",
+      "engineId": "otoc-echo-v1",
+      "execution": "simulator",
+      "parameters": {
+        "machine": "aer",
+        "lattice": "chain",
+        "n_sites": 5,
+        "depth": 6,
+        "exact": true,
+        "seed": 1603,
+        "theta_x": 2.2,
+        "theta_zz": 2.1,
+        "theta_z": 0.45,
+        "disorder": 0.48,
+        "include_taps": true,
+        "min_tap_level": 0.01
+      },
+      "inputSha256": [],
+      "outputSha256": [
+        "9e8890cb2c15195b945800ec7a527e191d13025669ff24e1a46b96027f82c58e"
+      ],
+      "jobId": "3cf48307-d6f0-4941-88a9-b00d5a637b8b"
+    }
+  ]
+}

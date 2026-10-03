@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+.venv/
+node_modules/
+__pycache__/
+*.pyc
+dist/
+build/
+private/
+.runtime/
+*.log
+!evidence/*.log
+evidence/audio/peaks/
+evidence/daw/Backups/
+*.reapeaks
+*.rpp-bak

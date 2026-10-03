@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "id": "effects-render-prism",
+  "producer": "moth-hackathon-2026@4e7afa79260a478ee598f215649af1367684a0bb",
+  "evidenceMode": "atlas-live",
+  "mothbakeCommit": "b36ac00286f63c3ee4d57a632fb8909c2d189f72",
+  "assets": [
+    {
+      "id": "ir",
+      "role": "ir",
+      "path": "assets/ir.json",
+      "mime": "application/json",
+      "sha256": "45907495ffd003bcff2ac5859549ed2b83d115aa27a3001148e5d2f3422810b5",
+      "sourceRunIds": [
+        "effects-render-prism"
+      ]
+    },
+    {
+      "id": "result",
+      "role": "result",
+      "path": "assets/result.wav",
+      "mime": "audio/wav",
+      "sha256": "c3f56fe24cbdd67d349bebe2e1c0a3da41f103aeedaabf5395397012e7f75990",
+      "sourceRunIds": [
+        "effects-render-prism"
+      ]
+    },
+    {
+      "id": "taps",
+      "role": "taps",
+      "path": "assets/taps.json",
+      "mime": "application/json",
+      "sha256": "c06c9906155267f5f70d904ec1d3abc62f1e443ac00b20e82a57c856bb862bf9",
+      "sourceRunIds": [
+        "effects-render-prism"
+      ]
+    }
+  ],
+  "runs": [
+    {
+      "id": "effects-render-prism",
+      "engineId": "retrocausal-echo-v1",
+      "execution": "simulator",
+      "parameters": {
+        "machine": "aer",
+        "emit": "audio",
+        "output_format": "float_32",
+        "sr": 22050,
+        "master_ms": 1260,
+        "mix": 1,
+        "feedback": 0,
+        "negative_mode": "phase",
+        "tail_ms": 0,
+        "min_level": 0.015,
+        "decay": 0.94,
+        "stereo_width": 1
+      },
+      "inputSha256": [
+        "df19ad2c95e87aa037d8cd5d3d1ed16cc16aef536b598b16ea2c48f9ac334e80",
+        "61f315bb803843cf4218267115ca09eb39c4cd34ee37e229e514b5c2243a637d"
+      ],
+      "outputSha256": [
+        "45907495ffd003bcff2ac5859549ed2b83d115aa27a3001148e5d2f3422810b5",
+        "c3f56fe24cbdd67d349bebe2e1c0a3da41f103aeedaabf5395397012e7f75990",
+        "c06c9906155267f5f70d904ec1d3abc62f1e443ac00b20e82a57c856bb862bf9"
+      ],
+      "jobId": "3760f5ca-872a-4524-a142-9eb38a634387"
+    }
+  ]
+}

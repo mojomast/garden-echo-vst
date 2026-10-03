@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "id": "echo-explicit-impulse",
+  "producer": "moth-hackathon-2026@219a46d02186352aa26c6e0b6015e0525d54cf42",
+  "evidenceMode": "atlas-live",
+  "mothbakeCommit": "b36ac00286f63c3ee4d57a632fb8909c2d189f72",
+  "assets": [
+    {
+      "id": "ir",
+      "role": "ir",
+      "path": "assets/ir.json",
+      "mime": "application/json",
+      "sha256": "8e1ef3e5c81a5ca14c158dd8e2a2cc907fa3bb8fd7488b5708a1ae5a99f9f3d3",
+      "sourceRunIds": [
+        "echo-explicit-impulse"
+      ]
+    },
+    {
+      "id": "result",
+      "role": "result",
+      "path": "assets/result.wav",
+      "mime": "audio/wav",
+      "sha256": "49e7bd3fb9504b2bb86c2f61cd6681ff9fd6a7a93afba6fa835192be7ebd2dfa",
+      "sourceRunIds": [
+        "echo-explicit-impulse"
+      ]
+    },
+    {
+      "id": "taps",
+      "role": "taps",
+      "path": "assets/taps.json",
+      "mime": "application/json",
+      "sha256": "aeb334262d2c1ea7f6168250e4f1afd0e51fa5747668c584afc8faa992f88cd3",
+      "sourceRunIds": [
+        "echo-explicit-impulse"
+      ]
+    }
+  ],
+  "runs": [
+    {
+      "id": "echo-explicit-impulse",
+      "engineId": "retrocausal-echo-v1",
+      "execution": "simulator",
+      "parameters": {
+        "machine": "aer",
+        "emit": "audio",
+        "output_format": "float_32",
+        "sr": 22050,
+        "master_ms": 720,
+        "mix": 1,
+        "feedback": 0,
+        "negative_mode": "invert",
+        "tail_ms": 0,
+        "min_level": 0.025
+      },
+      "inputSha256": [
+        "ae7549afcd890bef2274361c8b0aef888777729c5b97e07db8bffc5b85526d11",
+        "61f315bb803843cf4218267115ca09eb39c4cd34ee37e229e514b5c2243a637d"
+      ],
+      "outputSha256": [
+        "8e1ef3e5c81a5ca14c158dd8e2a2cc907fa3bb8fd7488b5708a1ae5a99f9f3d3",
+        "49e7bd3fb9504b2bb86c2f61cd6681ff9fd6a7a93afba6fa835192be7ebd2dfa",
+        "aeb334262d2c1ea7f6168250e4f1afd0e51fa5747668c584afc8faa992f88cd3"
+      ],
+      "jobId": "1c7f2c4b-e11f-4d06-92e6-88356c6c6777"
+    }
+  ]
+}

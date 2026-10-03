@@ -1,0 +1,8 @@
+{
+  "sourcePackId": "echo-measure",
+  "sourceRunId": "echo-measure",
+  "sourceJobId": "5e4da3b1-32fc-4b67-96e7-cb4fbb422249",
+  "sourceAssetSha256": "ce0ef77feeb02fd4832613f4e3f6c67ad9f8c3006e8b67a3fdc3c474b4a3e226",
+  "derivedInputSha256": "ae7549afcd890bef2274361c8b0aef888777729c5b97e07db8bffc5b85526d11",
+  "transformation": "Extract Atlas JSON result.output envelope as-is, with stable indentation; no DSP or measurement."
+}

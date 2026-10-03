@@ -1,0 +1,412 @@
+{
+  "schemaVersion": 1,
+  "kind": "Garden Echo recorded kernel build snapshot; not a GardenPack",
+  "evidenceMode": "atlas-recorded",
+  "mothbakeCommit": "b36ac00286f63c3ee4d57a632fb8909c2d189f72",
+  "claim": "Three locally curated sparse creative kernels from one remote explicit-unit-impulse render and one simulator trajectory; not independent experiments or measured rooms",
+  "remoteRenderCount": 1,
+  "remoteTrajectoryCount": 1,
+  "atlasJobIds": [
+    "1c7f2c4b-e11f-4d06-92e6-88356c6c6777",
+    "5e4da3b1-32fc-4b67-96e7-cb4fbb422249"
+  ],
+  "sourceFiles": {
+    "sources/RELEASE_INDEX.json": "14d7fd6fa5c736831f749b96387205543df2bb476a41cda9f82db58728a0986a",
+    "sources/evidence/atlas-release-verification.json": "8f4169c752a20b9ea0c9e96fa541e94b3756912aa6c2f63a10ccef2b19167856",
+    "sources/live-jobs/inputs/echo-trajectory.json": "ae7549afcd890bef2274361c8b0aef888777729c5b97e07db8bffc5b85526d11",
+    "sources/live-jobs/inputs/echo-trajectory.lineage.json": "968b7ceacede96168e7793b52e682cfc4d0e2dda23caaee79a213fc0249e5b50",
+    "sources/live-jobs/inputs/unit-impulse-float32.lineage.json": "77aa6e4c73d4d59a45c76dbc7725798392c6add437cdb7f81168bf6a31dcc8cb",
+    "sources/live-jobs/inputs/unit-impulse-float32.wav": "61f315bb803843cf4218267115ca09eb39c4cd34ee37e229e514b5c2243a637d",
+    "sources/releases/echo-explicit-impulse/assets/ir.json": "8e1ef3e5c81a5ca14c158dd8e2a2cc907fa3bb8fd7488b5708a1ae5a99f9f3d3",
+    "sources/releases/echo-explicit-impulse/assets/result.wav": "49e7bd3fb9504b2bb86c2f61cd6681ff9fd6a7a93afba6fa835192be7ebd2dfa",
+    "sources/releases/echo-explicit-impulse/assets/taps.json": "aeb334262d2c1ea7f6168250e4f1afd0e51fa5747668c584afc8faa992f88cd3",
+    "sources/releases/echo-explicit-impulse/pack.json": "be5314372045ac92d7b5d3c2ecd6d7566de2913a0546d81e80a74973fec12c3a",
+    "sources/releases/echo-measure/assets/inline-result.json": "ce0ef77feeb02fd4832613f4e3f6c67ad9f8c3006e8b67a3fdc3c474b4a3e226",
+    "sources/releases/echo-measure/pack.json": "a1e7fcc86ef043ed7129d6c83841ff34826d914a21be3d230a81e7ce5e02cbda"
+  },
+  "sourceSignal": {
+    "channels": 2,
+    "sampleRate": 22050,
+    "frames": 44100,
+    "durationSeconds": 2.0,
+    "peak": 0.7557339668273926,
+    "rms": 0.003816034869661791,
+    "meanPerChannel": [
+      -1.9894297659194388e-05,
+      -1.8628475820126178e-05
+    ],
+    "l1PerChannel": [
+      0.8831016141921282,
+      1.8089459091424942
+    ],
+    "nonzeroSamples": 8,
+    "clippedSamples": 0,
+    "allFinite": true
+  },
+  "sourceEventsFrameLeftRight": [
+    [
+      3969,
+      -0.26344120502471924,
+      -0.5594968795776367
+    ],
+    [
+      7938,
+      -0.21178780496120453,
+      -0.7557339668273926
+    ],
+    [
+      11907,
+      -0.4049910604953766,
+      0.251852422952652
+    ],
+    [
+      15876,
+      0.0028815437108278275,
+      0.24186263978481293
+    ]
+  ],
+  "renderParametersRequested": {
+    "machine": "aer",
+    "emit": "audio",
+    "output_format": "float_32",
+    "sr": 22050,
+    "master_ms": 720,
+    "mix": 1,
+    "feedback": 0,
+    "negative_mode": "invert",
+    "tail_ms": 0,
+    "min_level": 0.025
+  },
+  "renderParametersEffective": {
+    "lattice": "chain",
+    "n_sites": 8,
+    "width": null,
+    "height": null,
+    "depth": 8,
+    "kick_site": null,
+    "theta_zz": 1.0995574287564276,
+    "theta_x": 0.9424777960769379,
+    "theta_z": 0,
+    "disorder": 0,
+    "seed": null,
+    "kick": "Z",
+    "via": "auto",
+    "machine": "aer",
+    "shots": 4096,
+    "allow_high_shots": false,
+    "exact": true,
+    "fractional_gates": true,
+    "twirls": 1,
+    "ref_floor": null,
+    "initial_layout": null,
+    "master_ms": 720,
+    "bpm": null,
+    "division": 0.25,
+    "decay": 0.9,
+    "min_level": 0.025,
+    "mix": 1,
+    "stereo_width": 1,
+    "negative_mode": "invert",
+    "grain_ms": 120,
+    "reverse_unit": "grain",
+    "onset_min_ms": 40,
+    "fade_out_ms": 60,
+    "certainty": 0,
+    "tap_energy": "stack",
+    "f_clamp": 1,
+    "bus_norm": "power",
+    "output_gain": "headroom",
+    "diffusion_ms": 0,
+    "feedback": 0,
+    "feedback_source": "kick",
+    "max_regen": 24,
+    "emit": "audio",
+    "sr": 22050,
+    "ir_seconds": 3,
+    "tail_ms": 0,
+    "output_format": "float_32",
+    "include_tap_map": true
+  },
+  "remoteVerification": "Archived hub GET/re-download attestation; this importer performs offline verification only",
+  "spaces": [
+    {
+      "id": "leaf-chamber",
+      "file": "leaf-chamber.wav",
+      "stagedKernelSha256": "2318c94161fc9260b527fd7699385b39f6e1ab2ceaeab7532a4033285a885a57",
+      "sampleRate": 22050,
+      "frames": 44100,
+      "gainApplied": 0.4698869080076202,
+      "gainDb": -6.560133102488636,
+      "originalPeak": 0.7557339668273926,
+      "transform": {
+        "version": 1,
+        "source": "actual decoded remote result.wav nonzero frames",
+        "timeScaleNumerator": 1,
+        "timeScaleDenominator": 1,
+        "delayRounding": "nearest frame, ties to even",
+        "dampingPerEvent": 1.0,
+        "dampingExponent": "zero-based occupied-frame rank",
+        "polarity": 1,
+        "swapStereo": false,
+        "resampling": "none: source and output remain 22050 Hz; sparse delay retiming only",
+        "normalization": "min(1, 0.8/peak, 0.85/max_channel_sum_abs) before PCM quantization",
+        "preGainPeak": 0.7557339668273926,
+        "preGainMaxChannelL1": 1.8089459091424942,
+        "encoding": "PCM32 little endian; round-to-even(sample * 2^31), no clipping",
+        "length": "retain original 44100 frames, zero fill, no truncated events"
+      },
+      "signal": {
+        "channels": 2,
+        "sampleRate": 22050,
+        "frames": 44100,
+        "durationSeconds": 2.0,
+        "peak": 0.35510949697345495,
+        "rms": 0.0017931048260102183,
+        "meanPerChannel": [
+          -9.348070008211396e-06,
+          -8.753276896787609e-06
+        ],
+        "l1PerChannel": [
+          0.41495788656175137,
+          0.8500000005587935
+        ],
+        "nonzeroSamples": 8,
+        "clippedSamples": 0,
+        "allFinite": true
+      },
+      "allEventsFrameLeftRight": [
+        [
+          3969,
+          -0.12378757307305932,
+          -0.2629002588801086
+        ],
+        [
+          7938,
+          -0.09951631678268313,
+          -0.35510949697345495
+        ],
+        [
+          11907,
+          -0.1902999971061945,
+          0.118342156521976
+        ],
+        [
+          15876,
+          0.001353999599814415,
+          0.113648088183254
+        ]
+      ],
+      "tapsSecondsLeftRight": [
+        [
+          0.18,
+          -0.12378757307305932,
+          -0.2629002588801086
+        ],
+        [
+          0.36,
+          -0.09951631678268313,
+          -0.35510949697345495
+        ],
+        [
+          0.54,
+          -0.1902999971061945,
+          0.118342156521976
+        ]
+      ],
+      "tapMethod": "three strongest occupied frames of final decoded PCM WAV, chronological; full four events also archived",
+      "packId": "echo-explicit-impulse",
+      "jobId": "1c7f2c4b-e11f-4d06-92e6-88356c6c6777",
+      "sourceRunId": "echo-explicit-impulse",
+      "unitImpulseSha256": "61f315bb803843cf4218267115ca09eb39c4cd34ee37e229e514b5c2243a637d",
+      "trajectoryInputSha256": "ae7549afcd890bef2274361c8b0aef888777729c5b97e07db8bffc5b85526d11",
+      "trajectoryJobId": "5e4da3b1-32fc-4b67-96e7-cb4fbb422249",
+      "originalRenderSha256": "49e7bd3fb9504b2bb86c2f61cd6681ff9fd6a7a93afba6fa835192be7ebd2dfa"
+    },
+    {
+      "id": "moss-arcade",
+      "file": "moss-arcade.wav",
+      "stagedKernelSha256": "c5cd94b2603c5601dae5208e17380ea75190e945d09b08e0d72e65a2f0d58ebb",
+      "sampleRate": 22050,
+      "frames": 44100,
+      "gainApplied": 0.5394709694399139,
+      "gainDb": -5.360638420966288,
+      "originalPeak": 0.7557339668273926,
+      "transform": {
+        "version": 1,
+        "source": "actual decoded remote result.wav nonzero frames",
+        "timeScaleNumerator": 2,
+        "timeScaleDenominator": 3,
+        "delayRounding": "nearest frame, ties to even",
+        "dampingPerEvent": 0.875,
+        "dampingExponent": "zero-based occupied-frame rank",
+        "polarity": 1,
+        "swapStereo": false,
+        "resampling": "none: source and output remain 22050 Hz; sparse delay retiming only",
+        "normalization": "min(1, 0.8/peak, 0.85/max_channel_sum_abs) before PCM quantization",
+        "preGainPeak": 0.6612672209739685,
+        "preGainMaxChannelL1": 1.5756176850118209,
+        "encoding": "PCM32 little endian; round-to-even(sample * 2^31), no clipping",
+        "length": "retain original 44100 frames, zero fill, no truncated events"
+      },
+      "signal": {
+        "channels": 2,
+        "sampleRate": 22050,
+        "frames": 44100,
+        "durationSeconds": 2.0,
+        "peak": 0.35673446860164404,
+        "rms": 0.0018288365215277228,
+        "meanPerChannel": [
+          -9.259039413631639e-06,
+          -1.0592598307565226e-05
+        ],
+        "l1PerChannel": [
+          0.410406437702477,
+          0.849999999627471
+        ],
+        "nonzeroSamples": 8,
+        "clippedSamples": 0,
+        "allFinite": true
+      },
+      "allEventsFrameLeftRight": [
+        [
+          2646,
+          -0.1421188823878765,
+          -0.3018323238939047
+        ],
+        [
+          5292,
+          -0.09997170092537999,
+          -0.35673446860164404
+        ],
+        [
+          7938,
+          -0.1672744546085596,
+          0.10402322607114911
+        ],
+        [
+          10584,
+          0.0010413997806608677,
+          0.08740998106077313
+        ]
+      ],
+      "tapsSecondsLeftRight": [
+        [
+          0.12,
+          -0.1421188823878765,
+          -0.3018323238939047
+        ],
+        [
+          0.24,
+          -0.09997170092537999,
+          -0.35673446860164404
+        ],
+        [
+          0.36,
+          -0.1672744546085596,
+          0.10402322607114911
+        ]
+      ],
+      "tapMethod": "three strongest occupied frames of final decoded PCM WAV, chronological; full four events also archived",
+      "packId": "echo-explicit-impulse",
+      "jobId": "1c7f2c4b-e11f-4d06-92e6-88356c6c6777",
+      "sourceRunId": "echo-explicit-impulse",
+      "unitImpulseSha256": "61f315bb803843cf4218267115ca09eb39c4cd34ee37e229e514b5c2243a637d",
+      "trajectoryInputSha256": "ae7549afcd890bef2274361c8b0aef888777729c5b97e07db8bffc5b85526d11",
+      "trajectoryJobId": "5e4da3b1-32fc-4b67-96e7-cb4fbb422249",
+      "originalRenderSha256": "49e7bd3fb9504b2bb86c2f61cd6681ff9fd6a7a93afba6fa835192be7ebd2dfa"
+    },
+    {
+      "id": "rain-canopy",
+      "file": "rain-canopy.wav",
+      "stagedKernelSha256": "8a1d994184a11afe7cf6cbe16df5781a79d674db797f6152a3e995648bb68f70",
+      "sampleRate": 22050,
+      "frames": 44100,
+      "gainApplied": 0.6204378910954162,
+      "gainDb": -4.146033740342445,
+      "originalPeak": 0.7557339668273926,
+      "transform": {
+        "version": 1,
+        "source": "actual decoded remote result.wav nonzero frames",
+        "timeScaleNumerator": 5,
+        "timeScaleDenominator": 4,
+        "delayRounding": "nearest frame, ties to even",
+        "dampingPerEvent": 0.75,
+        "dampingExponent": "zero-based occupied-frame rank",
+        "polarity": -1,
+        "swapStereo": true,
+        "resampling": "none: source and output remain 22050 Hz; sparse delay retiming only",
+        "normalization": "min(1, 0.8/peak, 0.85/max_channel_sum_abs) before PCM quantization",
+        "preGainPeak": 0.5668004751205444,
+        "preGainMaxChannelL1": 1.3700001437682658,
+        "encoding": "PCM32 little endian; round-to-even(sample * 2^31), no clipping",
+        "length": "retain original 44100 frames, zero fill, no truncated events"
+      },
+      "signal": {
+        "channels": 2,
+        "sampleRate": 22050,
+        "frames": 44100,
+        "durationSeconds": 2.0,
+        "peak": 0.3516644914634526,
+        "rms": 0.0018817302963166766,
+        "meanPerChannel": [
+          1.2417122702665475e-05,
+          9.128932900253743e-06
+        ],
+        "l1PerChannel": [
+          0.8500000000931323,
+          0.4040944133885205
+        ],
+        "nonzeroSamples": 8,
+        "clippedSamples": 0,
+        "allFinite": true
+      },
+      "allEventsFrameLeftRight": [
+        [
+          4961,
+          0.3471330641768873,
+          0.1634489055722952
+        ],
+        [
+          9922,
+          0.3516644914634526,
+          0.09855088451877236
+        ],
+        [
+          14884,
+          -0.0878955670632422,
+          0.1413403870537877
+        ],
+        [
+          19845,
+          -0.06330687738955021,
+          -0.0007542362436652184
+        ]
+      ],
+      "tapsSecondsLeftRight": [
+        [
+          0.22498866213151927,
+          0.3471330641768873,
+          0.1634489055722952
+        ],
+        [
+          0.44997732426303855,
+          0.3516644914634526,
+          0.09855088451877236
+        ],
+        [
+          0.6750113378684808,
+          -0.0878955670632422,
+          0.1413403870537877
+        ]
+      ],
+      "tapMethod": "three strongest occupied frames of final decoded PCM WAV, chronological; full four events also archived",
+      "packId": "echo-explicit-impulse",
+      "jobId": "1c7f2c4b-e11f-4d06-92e6-88356c6c6777",
+      "sourceRunId": "echo-explicit-impulse",
+      "unitImpulseSha256": "61f315bb803843cf4218267115ca09eb39c4cd34ee37e229e514b5c2243a637d",
+      "trajectoryInputSha256": "ae7549afcd890bef2274361c8b0aef888777729c5b97e07db8bffc5b85526d11",
+      "trajectoryJobId": "5e4da3b1-32fc-4b67-96e7-cb4fbb422249",
+      "originalRenderSha256": "49e7bd3fb9504b2bb86c2f61cd6681ff9fd6a7a93afba6fa835192be7ebd2dfa"
+    }
+  ]
+}

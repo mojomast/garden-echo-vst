@@ -1,0 +1,12 @@
+[0/2] Re-checking globbed directories...
+[1/6] Building VST3 manifest helper for GardenEcho
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /workspace/garden-echo-vst/build/release-audit-lead/vst3_helpers/GardenEcho
+ninja: no work to do.
+[2/6] Linking CXX executable "GardenEcho_artefacts/Release/Standalone/Garden Echo"
+[3/6] Linking CXX shared module "GardenEcho_artefacts/Release/VST3/Garden Echo.vst3/Contents/x86_64-linux/Garden Echo.so"
+removing moduleinfo.json
+creating /workspace/garden-echo-vst/build/release-audit-lead/GardenEcho_artefacts/Release/VST3/Garden Echo.vst3/Contents/Resources/moduleinfo.json
+[4/6] Linking CXX executable EchoChecks_artefacts/Release/EchoChecks
+[5/6] Linking CXX executable StateMigrationChecks_artefacts/Release/StateMigrationChecks

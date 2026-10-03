@@ -1,0 +1,61 @@
+PASS identity / finite / allocation: 44100 Hz, block 32
+PASS embedded WAV convolution: leaf-chamber, 44100 Hz, block 32, max error 7.450581e-09
+PASS embedded WAV convolution: moss-arcade, 44100 Hz, block 32, max error 5.587935e-09
+PASS embedded WAV convolution: rain-canopy, 44100 Hz, block 32, max error 5.587935e-09
+PASS identity / finite / allocation: 44100 Hz, block 64
+PASS embedded WAV convolution: leaf-chamber, 44100 Hz, block 64, max error 5.587935e-09
+PASS embedded WAV convolution: moss-arcade, 44100 Hz, block 64, max error 5.587935e-09
+PASS embedded WAV convolution: rain-canopy, 44100 Hz, block 64, max error 7.450581e-09
+PASS identity / finite / allocation: 44100 Hz, block 256
+PASS embedded WAV convolution: leaf-chamber, 44100 Hz, block 256, max error 7.450581e-09
+PASS embedded WAV convolution: moss-arcade, 44100 Hz, block 256, max error 9.313226e-09
+PASS embedded WAV convolution: rain-canopy, 44100 Hz, block 256, max error 5.587935e-09
+PASS identity / finite / allocation: 44100 Hz, block 1024
+PASS embedded WAV convolution: leaf-chamber, 44100 Hz, block 1024, max error 7.450581e-09
+PASS embedded WAV convolution: moss-arcade, 44100 Hz, block 1024, max error 7.450581e-09
+PASS embedded WAV convolution: rain-canopy, 44100 Hz, block 1024, max error 3.72529e-09
+PASS identity / finite / allocation: 48000 Hz, block 32
+PASS embedded WAV convolution: leaf-chamber, 48000 Hz, block 32, max error 7.450581e-09
+PASS embedded WAV convolution: moss-arcade, 48000 Hz, block 32, max error 7.450581e-09
+PASS embedded WAV convolution: rain-canopy, 48000 Hz, block 32, max error 5.587935e-09
+PASS identity / finite / allocation: 48000 Hz, block 64
+PASS embedded WAV convolution: leaf-chamber, 48000 Hz, block 64, max error 9.313226e-09
+PASS embedded WAV convolution: moss-arcade, 48000 Hz, block 64, max error 5.587935e-09
+PASS embedded WAV convolution: rain-canopy, 48000 Hz, block 64, max error 5.587935e-09
+PASS identity / finite / allocation: 48000 Hz, block 256
+PASS embedded WAV convolution: leaf-chamber, 48000 Hz, block 256, max error 7.450581e-09
+PASS embedded WAV convolution: moss-arcade, 48000 Hz, block 256, max error 6.519258e-09
+PASS embedded WAV convolution: rain-canopy, 48000 Hz, block 256, max error 7.450581e-09
+PASS identity / finite / allocation: 48000 Hz, block 1024
+PASS embedded WAV convolution: leaf-chamber, 48000 Hz, block 1024, max error 5.587935e-09
+PASS embedded WAV convolution: moss-arcade, 48000 Hz, block 1024, max error 7.450581e-09
+PASS embedded WAV convolution: rain-canopy, 48000 Hz, block 1024, max error 7.450581e-09
+PASS identity / finite / allocation: 96000 Hz, block 32
+PASS embedded WAV convolution: leaf-chamber, 96000 Hz, block 32, max error 5.587935e-09
+PASS embedded WAV convolution: moss-arcade, 96000 Hz, block 32, max error 4.656613e-09
+PASS embedded WAV convolution: rain-canopy, 96000 Hz, block 32, max error 4.656613e-09
+PASS identity / finite / allocation: 96000 Hz, block 64
+PASS embedded WAV convolution: leaf-chamber, 96000 Hz, block 64, max error 7.450581e-09
+PASS embedded WAV convolution: moss-arcade, 96000 Hz, block 64, max error 5.587935e-09
+PASS embedded WAV convolution: rain-canopy, 96000 Hz, block 64, max error 4.656613e-09
+PASS identity / finite / allocation: 96000 Hz, block 256
+PASS embedded WAV convolution: leaf-chamber, 96000 Hz, block 256, max error 6.519258e-09
+PASS embedded WAV convolution: moss-arcade, 96000 Hz, block 256, max error 4.656613e-09
+PASS embedded WAV convolution: rain-canopy, 96000 Hz, block 256, max error 4.656613e-09
+PASS identity / finite / allocation: 96000 Hz, block 1024
+PASS embedded WAV convolution: leaf-chamber, 96000 Hz, block 1024, max error 7.450581e-09
+PASS embedded WAV convolution: moss-arcade, 96000 Hz, block 1024, max error 4.656613e-09
+PASS embedded WAV convolution: rain-canopy, 96000 Hz, block 1024, max error 4.656613e-09
+PASS 75ms impulse predelay, stereo, bypass, state restore/hash fallback
+PASS reset / large prepare hint: 44100 Hz, hint 8193
+PASS reset / large prepare hint: 44100 Hz, hint 16384
+PASS reset / large prepare hint: 48000 Hz, hint 8193
+PASS reset / large prepare hint: 48000 Hz, hint 16384
+PASS reset / large prepare hint: 96000 Hz, hint 8193
+PASS reset / large prepare hint: 96000 Hz, hint 16384
+PASS mono layout, zero/oversized variable blocks, smooth preset change/history
+MEASURED wall 0.0735s for 1.0027s stereo 48k audio (4 warm FIR engines); ratio 0.073; shared VM
+PASS actual processor render: leaf-chamber, peak 0.05845
+PASS actual processor render: moss-arcade, peak 0.05976
+PASS actual processor render: rain-canopy, peak 0.06247
+ALL EchoChecks PASSED

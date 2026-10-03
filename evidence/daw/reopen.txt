@@ -1,0 +1,3 @@
+scan=VST3: Garden Echo (Moth Garden)
+reopened=VST3: Garden Echo (Moth Garden)
+state_space=0.66667 wet=0.56000 predelay=0.04800

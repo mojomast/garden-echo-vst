@@ -1,0 +1,26 @@
+scan=VST3: Garden Echo (Moth Garden)
+loaded=VST3: Garden Echo (Moth Garden)
+parameter[0]=Space
+parameter[1]=Wet
+parameter[2]=Predelay
+parameter[3]=Output trim
+parameter[4]=Bypass
+parameter[5]=Study
+parameter[6]=Study time
+parameter[7]=Study feedback
+parameter[8]=Study colour
+parameter[9]=Study motion
+parameter[10]=Bypass
+parameter[11]=Bypass
+parameter[12]=Wet
+parameter[13]=Delta
+selection=Study index=1 normalized=0.08333
+selection=Study index=4 normalized=0.33333
+selection=Study index=7 normalized=0.58333
+selection=Study index=8 normalized=0.66667
+selection=Study index=0 normalized=0.00000
+selection=Space index=3 normalized=1.00000
+diagnostic=unit-impulse
+selection=Space index=1 normalized=0.33333
+selection=Study index=4 normalized=0.33333
+saved=/workspace/moth-echo-ship/evidence/final-verification/final-host.rpp

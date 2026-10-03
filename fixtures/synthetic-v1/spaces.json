@@ -1,0 +1,88 @@
+{
+  "evidenceMode": "synthetic",
+  "sampleRate": 48000,
+  "unitImpulseSha256": "58d13a9b653af8dac113722c89ebef6777a121b74bc83190abed105d1dfdd2f1",
+  "spaces": [
+    {
+      "id": "leaf-chamber",
+      "name": "Leaf Chamber",
+      "description": "tight foliage reflections",
+      "kernelSha256": "e7b29d26b198f5faeab3758949f66d921d6326ecc3290c3b83ed76d0646e79fd",
+      "lengthSamples": 26400,
+      "peakBeforeNormalisation": 1.0,
+      "gainApplied": 1.0,
+      "tapsSecondsLeftRight": [
+        [
+          0.083,
+          0.32,
+          -0.08
+        ],
+        [
+          0.167,
+          -0.2,
+          0.24
+        ],
+        [
+          0.293,
+          0.12,
+          0.18
+        ]
+      ],
+      "provenance": "SYNTHETIC deterministic FIR; no Atlas job"
+    },
+    {
+      "id": "moss-arcade",
+      "name": "Moss Arcade",
+      "description": "stone-and-moss alternating arches",
+      "kernelSha256": "081d8ae9b2af2db920eabebd3915cf5246334691db0f6a69c80942907d694c6b",
+      "lengthSamples": 52800,
+      "peakBeforeNormalisation": 1.0,
+      "gainApplied": 1.0,
+      "tapsSecondsLeftRight": [
+        [
+          0.117,
+          -0.25,
+          0.34
+        ],
+        [
+          0.303,
+          0.27,
+          -0.16
+        ],
+        [
+          0.511,
+          -0.15,
+          0.22
+        ]
+      ],
+      "provenance": "SYNTHETIC deterministic FIR; no Atlas job"
+    },
+    {
+      "id": "rain-canopy",
+      "name": "Rain Canopy",
+      "description": "wide, soft dripping canopy",
+      "kernelSha256": "322b64813e821ae045d408a3809c37eaea23764dcff185892a7b3d7b23743f32",
+      "lengthSamples": 74400,
+      "peakBeforeNormalisation": 1.0,
+      "gainApplied": 1.0,
+      "tapsSecondsLeftRight": [
+        [
+          0.061,
+          0.2,
+          0.06
+        ],
+        [
+          0.241,
+          -0.1,
+          0.25
+        ],
+        [
+          0.619,
+          0.13,
+          -0.19
+        ]
+      ],
+      "provenance": "SYNTHETIC deterministic FIR; no Atlas job"
+    }
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "schemaVersion": 1,
+  "ceilingCredits": 60,
+  "heldCredits": 24,
+  "availableCredits": 36,
+  "packs": [
+    {
+      "id": "blur-core-seed-2",
+      "evidenceMode": "atlas-live",
+      "execution": "simulator",
+      "engineId": "blur-core-v1",
+      "jobId": "5d8798fe-3053-4542-bbb3-371eda15d82c",
+      "reservedCredits": 1,
+      "dependsOn": [],
+      "packPath": "releases/blur-core-seed-2/pack.json",
+      "packSha256": "fc71a0db2f575fb3360fbd962f38449db997dbb7db28185b4613fb4da57c6ae2",
+      "assets": [
+        {
+          "role": "result",
+          "path": "releases/blur-core-seed-2/assets/inline-result.json",
+          "sha256": "9e03eba37e071a6c529524837e4e2a0c4049335b972dd09c77fde5636ca4fcbc"
+        }
+      ]
+    },
+    {
+      "id": "echo-explicit-impulse",
+      "evidenceMode": "atlas-live",
+      "execution": "simulator",
+      "engineId": "retrocausal-echo-v1",
+      "jobId": "1c7f2c4b-e11f-4d06-92e6-88356c6c6777",
+      "reservedCredits": 2,
+      "dependsOn": [
+        "echo-measure"
+      ],
+      "packPath": "releases/echo-explicit-impulse/pack.json",
+      "packSha256": "be5314372045ac92d7b5d3c2ecd6d7566de2913a0546d81e80a74973fec12c3a",
+      "assets": [
+        {
+          "role": "ir",
+          "path": "releases/echo-explicit-impulse/assets/ir.json",
+          "sha256": "8e1ef3e5c81a5ca14c158dd8e2a2cc907fa3bb8fd7488b5708a1ae5a99f9f3d3"
+        },
+        {
+          "role": "result",
+          "path": "releases/echo-explicit-impulse/assets/result.wav",
+          "sha256": "49e7bd3fb9504b2bb86c2f61cd6681ff9fd6a7a93afba6fa835192be7ebd2dfa"
+        },
+        {
+          "role": "taps",
+          "path": "releases/echo-explicit-impulse/assets/taps.json",
+          "sha256": "aeb334262d2c1ea7f6168250e4f1afd0e51fa5747668c584afc8faa992f88cd3"
+        }
+      ]
+    },
+    {
+      "id": "echo-impulse",
+      "evidenceMode": "atlas-live",
+      "execution": "simulator",
+      "engineId": "retrocausal-echo-v1",
+      "jobId": "05dd2ff4-2848-4c03-984f-c4a079c3c3e0",
+      "reservedCredits": 2,
+      "dependsOn": [
+        "echo-measure"
+      ],
+      "packPath": "releases/echo-impulse/pack.json",
+      "packSha256": "0b5f85c88a5ebf3f04806c4e79e179ac6d35118f42bf55714cf695daaffc7717",
+      "assets": [
+        {
+          "role": "ir",
+          "path": "releases/echo-impulse/assets/ir.json",
+          "sha256": "8e1ef3e5c81a5ca14c158dd8e2a2cc907fa3bb8fd7488b5708a1ae5a99f9f3d3"
+        },
+        {
+          "role": "result",
+          "path": "releases/echo-impulse/assets/result.wav",
+          "sha256": "6e0f6f562b66ad95f435fb4acbb43191e2881348fac7a966670fa556ca2def3b"
+        },
+        {
+          "role": "taps",
+          "path": "releases/echo-impulse/assets/taps.json",
+          "sha256": "c9811147f1369f3da35afd7ad6f8a5c1fd841d0c22ef69d8d5c67c1333eaa0c2"
+        }
+      ]
+    },
+    {
+      "id": "echo-measure",
+      "evidenceMode": "atlas-live",
+      "execution": "simulator",
+      "engineId": "otoc-echo-v1",
+      "jobId": "5e4da3b1-32fc-4b67-96e7-cb4fbb422249",
+      "reservedCredits": 1,
+      "dependsOn": [],
+      "packPath": "releases/echo-measure/pack.json",
+      "packSha256": "a1e7fcc86ef043ed7129d6c83841ff34826d914a21be3d230a81e7ce5e02cbda",
+      "assets": [
+        {
+          "role": "result",
+          "path": "releases/echo-measure/assets/inline-result.json",
+          "sha256": "ce0ef77feeb02fd4832613f4e3f6c67ad9f8c3006e8b67a3fdc3c474b4a3e226"
+        }
+      ]
+    },
+    {
+      "id": "garden-midi-blur",
+      "evidenceMode": "atlas-live",
+      "execution": "simulator",
+      "engineId": "blur-midi-v1",
+      "jobId": "9577ae87-6738-46ed-8bb1-0696607ffa77",
+      "reservedCredits": 1,
+      "dependsOn": [],
+      "packPath": "releases/garden-midi-blur/pack.json",
+      "packSha256": "7daf5ef14539bd9d35c254217af0e76ca0445520b51c42de4248287e9be0e158",
+      "assets": [
+        {
+          "role": "result",
+          "path": "releases/garden-midi-blur/assets/result.mid",
+          "sha256": "e24e90aa8e9d2ae34860b5905fe26ed2d55a4ec51a1b22ef0a006f080a4945cd"
+        }
+      ]
+    },
+    {
+      "id": "garden-reservoir-32",
+      "evidenceMode": "atlas-live",
+      "execution": "unknown",
+      "engineId": "qrc-image-v1",
+      "jobId": "5ea0ae4e-84c3-45c4-a0e1-79bc7a22d817",
+      "reservedCredits": 5,
+      "dependsOn": [
+        "night-blur",
+        "garden-teleblur"
+      ],
+      "packPath": "releases/garden-reservoir-32/pack.json",
+      "packSha256": "48c4f9cf0983670c59b394f5aa826bcbb4584d829fc6a1813a8adfed8aaf3a6a",
+      "assets": [
+        {
+          "role": "result",
+          "path": "releases/garden-reservoir-32/assets/result.gif",
+          "sha256": "cd78b8ff75fdea3b908c9f0430629e8b550c085b5042bb93d30941bf9fd948c1"
+        },
+        {
+          "role": "state",
+          "path": "releases/garden-reservoir-32/assets/state.json",
+          "sha256": "a82ef4bbc04a9983c4e4cf490c9ec9e902f55827ef0dd21a09721caf6ca9cbee"
+        },
+        {
+          "role": "vocabulary",
+          "path": "releases/garden-reservoir-32/assets/vocabulary.zip",
+          "sha256": "6058449f1d5681776418a2c40718137a0b01da7f8b626a21c2ecf9f972fdce6e"
+        }
+      ]
+    },
+    {
+      "id": "garden-teleblur",
+      "evidenceMode": "atlas-live",
+      "execution": "simulator",
+      "engineId": "telablur-v1",
+      "jobId": "4ca4cfa7-1c21-4996-b936-19b296145263",
+      "reservedCredits": 1,
+      "dependsOn": [
+        "night-blur"
+      ],
+      "packPath": "releases/garden-teleblur/pack.json",
+      "packSha256": "1dd7e291066e82d2d929f4371af1e6448b9c1e168c70157781413f01c9e1d40f",
+      "assets": [
+        {
+          "role": "result",
+          "path": "releases/garden-teleblur/assets/result.png",
+          "sha256": "1b27e8c8ae7cca0fc5fde49897da8a697228273b7a20f0bfcae460507924635c"
+        }
+      ]
+    },
+    {
+      "id": "night-blur",
+      "evidenceMode": "atlas-live",
+      "execution": "simulator",
+      "engineId": "blur-v1",
+      "jobId": "d14277bb-33c6-4291-8066-13b635969e46",
+      "reservedCredits": 1,
+      "dependsOn": [],
+      "packPath": "releases/night-blur/pack.json",
+      "packSha256": "d6980a1f23a6bb3121f2bb7247fbde9edc88d64d6953087b7fef57de24cf3c35",
+      "assets": [
+        {
+          "role": "result",
+          "path": "releases/night-blur/assets/result.png",
+          "sha256": "1045439f1260188ebf24e3819833c599e693d9f6de3dfe2efd859bf13bc661ab"
+        }
+      ]
+    },
+    {
+      "id": "notebook-spread",
+      "evidenceMode": "atlas-live",
+      "execution": "simulator",
+      "engineId": "blur-core-v1",
+      "jobId": "da8e2302-2b2e-4ef7-9ce4-1e7b5f4e782e",
+      "reservedCredits": 1,
+      "dependsOn": [],
+      "packPath": "releases/notebook-spread/pack.json",
+      "packSha256": "72aff21bda1e1a15d734e2ae0a3b46ca58e626d53360ee668471b4dd9a62fb35",
+      "assets": [
+        {
+          "role": "result",
+          "path": "releases/notebook-spread/assets/inline-result.json",
+          "sha256": "c07c9ba272c1e416d0ba78cb23376a6046d87ee76909a328234b96fe82e8215b"
+        }
+      ]
+    },
+    {
+      "id": "notebook-vertical",
+      "evidenceMode": "atlas-live",
+      "execution": "simulator",
+      "engineId": "blur-core-v1",
+      "jobId": "689673ad-c224-4eeb-9d61-2de7d3e60de7",
+      "reservedCredits": 1,
+      "dependsOn": [],
+      "packPath": "releases/notebook-vertical/pack.json",
+      "packSha256": "7cb65f0e823ed1fa95ef9a60afc425d77c89dff56dbef118909625d96a117ede",
+      "assets": [
+        {
+          "role": "result",
+          "path": "releases/notebook-vertical/assets/inline-result.json",
+          "sha256": "6c25a1244dfb00776e9b19e9fd29658a20ef43ca57d8ad8b6e666d35dd25342d"
+        }
+      ]
+    },
+    {
+      "id": "notebook-zero",
+      "evidenceMode": "atlas-live",
+      "execution": "simulator",
+      "engineId": "blur-core-v1",
+      "jobId": "46bd3f4e-5cd0-46a0-ab30-92973db9cd40",
+      "reservedCredits": 1,
+      "dependsOn": [],
+      "packPath": "releases/notebook-zero/pack.json",
+      "packSha256": "8aa84896977d51864e76b9d42e1fc2a74024f37d6b6f4c4d6cea6e277cf9e7be",
+      "assets": [
+        {
+          "role": "result",
+          "path": "releases/notebook-zero/assets/inline-result.json",
+          "sha256": "ac10ca463271017a7182b3a8f82880d1de7c50179d719b56a683430db07eb60b"
+        }
+      ]
+    }
+  ],
+  "notice": "Live Atlas jobs on documented simulators. Credit values are reservations, not a billing statement. No hardware or quantum-advantage claim."
+}

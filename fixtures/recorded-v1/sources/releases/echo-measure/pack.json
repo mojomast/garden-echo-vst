@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "echo-measure",
+  "producer": "moth-hackathon-2026@61118a63145aa0326bd8c4461d648c7f9aaf8f7c",
+  "evidenceMode": "atlas-live",
+  "mothbakeCommit": "b36ac00286f63c3ee4d57a632fb8909c2d189f72",
+  "assets": [
+    {
+      "id": "inline-result",
+      "role": "result",
+      "path": "assets/inline-result.json",
+      "mime": "application/json",
+      "sha256": "ce0ef77feeb02fd4832613f4e3f6c67ad9f8c3006e8b67a3fdc3c474b4a3e226",
+      "sourceRunIds": [
+        "echo-measure"
+      ]
+    }
+  ],
+  "runs": [
+    {
+      "id": "echo-measure",
+      "engineId": "otoc-echo-v1",
+      "execution": "simulator",
+      "parameters": {
+        "machine": "aer",
+        "lattice": "chain",
+        "n_sites": 4,
+        "depth": 4,
+        "exact": true,
+        "seed": 607,
+        "disorder": 0.1,
+        "include_taps": true,
+        "min_tap_level": 0.02
+      },
+      "inputSha256": [],
+      "outputSha256": [
+        "ce0ef77feeb02fd4832613f4e3f6c67ad9f8c3006e8b67a3fdc3c474b4a3e226"
+      ],
+      "jobId": "5e4da3b1-32fc-4b67-96e7-cb4fbb422249"
+    }
+  ]
+}

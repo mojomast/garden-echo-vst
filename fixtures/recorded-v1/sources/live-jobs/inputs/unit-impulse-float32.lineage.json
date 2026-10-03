@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "source": "Original deterministic mathematical unit impulse",
+  "format": "IEEE float32 WAV",
+  "channels": 1,
+  "sampleRate": 22050,
+  "frames": 44100,
+  "durationSeconds": 2,
+  "nonzeroSamples": 1,
+  "firstSample": 1.0,
+  "allOtherSamples": 0.0,
+  "sha256": "61f315bb803843cf4218267115ca09eb39c4cd34ee37e229e514b5c2243a637d"
+}

@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "id": "garden-echo-synthetic-v1",
+  "producer": "Garden Echo fixture generator v1",
+  "evidenceMode": "synthetic",
+  "mothbakeCommit": "b36ac00286f63c3ee4d57a632fb8909c2d189f72",
+  "assets": [
+    {
+      "id": "unit-impulse",
+      "role": "unit-impulse",
+      "path": "unit-impulse.wav",
+      "mime": "audio/wav",
+      "sha256": "58d13a9b653af8dac113722c89ebef6777a121b74bc83190abed105d1dfdd2f1",
+      "sourceRunIds": []
+    },
+    {
+      "id": "identity",
+      "role": "unit-test-kernel",
+      "path": "identity.wav",
+      "mime": "audio/wav",
+      "sha256": "ec0cdcc87addf549fb046adfada602587c686f38849fed4c74e25f61d421f24c",
+      "sourceRunIds": [
+        "synthetic-identity-v1"
+      ]
+    },
+    {
+      "id": "leaf-chamber",
+      "role": "impulse-based-creative-kernel",
+      "path": "leaf-chamber.wav",
+      "mime": "audio/wav",
+      "sha256": "e7b29d26b198f5faeab3758949f66d921d6326ecc3290c3b83ed76d0646e79fd",
+      "sourceRunIds": [
+        "synthetic-leaf-chamber-fir-v1"
+      ]
+    },
+    {
+      "id": "moss-arcade",
+      "role": "impulse-based-creative-kernel",
+      "path": "moss-arcade.wav",
+      "mime": "audio/wav",
+      "sha256": "081d8ae9b2af2db920eabebd3915cf5246334691db0f6a69c80942907d694c6b",
+      "sourceRunIds": [
+        "synthetic-moss-arcade-fir-v1"
+      ]
+    },
+    {
+      "id": "rain-canopy",
+      "role": "impulse-based-creative-kernel",
+      "path": "rain-canopy.wav",
+      "mime": "audio/wav",
+      "sha256": "322b64813e821ae045d408a3809c37eaea23764dcff185892a7b3d7b23743f32",
+      "sourceRunIds": [
+        "synthetic-rain-canopy-fir-v1"
+      ]
+    }
+  ],
+  "runs": [
+    {
+      "id": "synthetic-identity-v1",
+      "engineId": "local-identity-fir-v1",
+      "execution": "unknown",
+      "parameters": {
+        "numberOfNonzeroSamples": 1
+      },
+      "inputSha256": [
+        "58d13a9b653af8dac113722c89ebef6777a121b74bc83190abed105d1dfdd2f1"
+      ],
+      "outputSha256": [
+        "ec0cdcc87addf549fb046adfada602587c686f38849fed4c74e25f61d421f24c"
+      ],
+      "jobId": null
+    },
+    {
+      "id": "synthetic-leaf-chamber-fir-v1",
+      "engineId": "local-synthetic-fir-v1",
+      "execution": "unknown",
+      "parameters": {
+        "seed": 431,
+        "durationSeconds": 0.55,
+        "taps": [
+          [
+            0.083,
+            0.32,
+            -0.08
+          ],
+          [
+            0.167,
+            -0.2,
+            0.24
+          ],
+          [
+            0.293,
+            0.12,
+            0.18
+          ]
+        ]
+      },
+      "inputSha256": [
+        "58d13a9b653af8dac113722c89ebef6777a121b74bc83190abed105d1dfdd2f1"
+      ],
+      "outputSha256": [
+        "e7b29d26b198f5faeab3758949f66d921d6326ecc3290c3b83ed76d0646e79fd"
+      ],
+      "jobId": null
+    },
+    {
+      "id": "synthetic-moss-arcade-fir-v1",
+      "engineId": "local-synthetic-fir-v1",
+      "execution": "unknown",
+      "parameters": {
+        "seed": 702,
+        "durationSeconds": 1.1,
+        "taps": [
+          [
+            0.117,
+            -0.25,
+            0.34
+          ],
+          [
+            0.303,
+            0.27,
+            -0.16
+          ],
+          [
+            0.511,
+            -0.15,
+            0.22
+          ]
+        ]
+      },
+      "inputSha256": [
+        "58d13a9b653af8dac113722c89ebef6777a121b74bc83190abed105d1dfdd2f1"
+      ],
+      "outputSha256": [
+        "081d8ae9b2af2db920eabebd3915cf5246334691db0f6a69c80942907d694c6b"
+      ],
+      "jobId": null
+    },
+    {
+      "id": "synthetic-rain-canopy-fir-v1",
+      "engineId": "local-synthetic-fir-v1",
+      "execution": "unknown",
+      "parameters": {
+        "seed": 991,
+        "durationSeconds": 1.55,
+        "taps": [
+          [
+            0.061,
+            0.2,
+            0.06
+          ],
+          [
+            0.241,
+            -0.1,
+            0.25
+          ],
+          [
+            0.619,
+            0.13,
+            -0.19
+          ]
+        ]
+      },
+      "inputSha256": [
+        "58d13a9b653af8dac113722c89ebef6777a121b74bc83190abed105d1dfdd2f1"
+      ],
+      "outputSha256": [
+        "322b64813e821ae045d408a3809c37eaea23764dcff185892a7b3d7b23743f32"
+      ],
+      "jobId": null
+    }
+  ]
+}

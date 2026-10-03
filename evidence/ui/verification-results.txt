@@ -1,0 +1,119 @@
+Garden Echo native UI final verification, 2026-09-28
+
+All final command exit statuses below: 0.
+Default and shortlist configure arguments: docs/UI_DESIGN.md.
+Default build: cmake --build build/astra-ui --target GardenEcho_Standalone GardenEcho_VST3 -j 2
+Shortlist build: cmake --build build/astra-ui/shortlist --target GardenEcho_Standalone -j 2
+Default checks: python3 evidence/ui/run_native_checks.py
+Shortlist checks: GARDEN_UI_BUILD_DIR=build/astra-ui/shortlist python3 evidence/ui/run_native_checks.py
+Capture: GARDEN_UI_ACTIONS from capture-dimensions.json; xvfb-run -a -s "-screen 0 1400x1200x24" python3 evidence/ui/capture_native.py
+Diff: git diff --check
+
+
+===== configure.log (actual output) =====
+-- The C compiler identification is GNU 15.2.0
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Python3: /usr/bin/python3 (found version "3.13.7") found components: Interpreter
+Verified atlas-recorded spaces plus synthetic identity diagnostic; generated /workspace/moth-echo-ship/build/astra-ui/generated/SpaceData.h
+-- Found PkgConfig: /usr/bin/pkg-config (found version "1.8.1")
+-- Checking for module 'alsa'
+--   Found alsa, version 1.2.14
+-- Checking for modules 'freetype2;fontconfig'
+--   Found freetype2, version 26.2.20
+--   Found fontconfig, version 2.15.0
+-- Checking for module 'gl'
+--   Found gl, version 1.2
+-- Checking for module 'libcurl'
+--   Package 'libcurl', required by 'virtual:world', not found
+-- Checking for modules 'webkit2gtk-4.0;gtk+-x11-3.0'
+--   Package 'webkit2gtk-4.0', required by 'virtual:world', not found
+--   Package 'gtk+-x11-3.0', required by 'virtual:world', not found
+-- Configuring juceaide
+-- Building juceaide
+-- Exporting juceaide
+-- Testing juceaide
+-- Finished setting up juceaide
+-- Configuring done (13.8s)
+-- Generating done (0.0s)
+-- Build files have been written to: /workspace/moth-echo-ship/build/astra-ui
+
+===== configure-shortlist.log (actual output) =====
+-- The C compiler identification is GNU 15.2.0
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Python3: /usr/bin/python3 (found version "3.13.7") found components: Interpreter
+Verified atlas-recorded spaces plus synthetic identity diagnostic; generated /workspace/moth-echo-ship/build/astra-ui/shortlist/generated/SpaceData.h
+-- Found PkgConfig: /usr/bin/pkg-config (found version "1.8.1")
+-- Checking for module 'alsa'
+--   Found alsa, version 1.2.14
+-- Checking for modules 'freetype2;fontconfig'
+--   Found freetype2, version 26.2.20
+--   Found fontconfig, version 2.15.0
+-- Checking for module 'gl'
+--   Found gl, version 1.2
+-- Checking for module 'libcurl'
+--   Package 'libcurl', required by 'virtual:world', not found
+-- Checking for modules 'webkit2gtk-4.0;gtk+-x11-3.0'
+--   Package 'webkit2gtk-4.0', required by 'virtual:world', not found
+--   Package 'gtk+-x11-3.0', required by 'virtual:world', not found
+-- Configuring juceaide
+-- Building juceaide
+-- Exporting juceaide
+-- Testing juceaide
+-- Finished setting up juceaide
+-- Configuring done (13.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /workspace/moth-echo-ship/build/astra-ui/shortlist
+
+===== build.log (actual output) =====
+[0/2] Re-checking globbed directories...
+[1/6] Building VST3 manifest helper for GardenEcho
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /workspace/moth-echo-ship/build/astra-ui/vst3_helpers/GardenEcho
+ninja: no work to do.
+[2/6] Building CXX object CMakeFiles/GardenEcho.dir/src/PluginEditor.cpp.o
+[3/6] Linking CXX static library "GardenEcho_artefacts/Release/libGarden Echo_SharedCode.a"
+[4/6] Linking CXX executable "GardenEcho_artefacts/Release/Standalone/Garden Echo"
+[5/6] Linking CXX shared module "GardenEcho_artefacts/Release/VST3/Garden Echo.vst3/Contents/x86_64-linux/Garden Echo.so"
+removing moduleinfo.json
+creating /workspace/moth-echo-ship/build/astra-ui/GardenEcho_artefacts/Release/VST3/Garden Echo.vst3/Contents/Resources/moduleinfo.json
+
+===== build-shortlist.log (actual output) =====
+[0/2] Re-checking globbed directories...
+[1/4] Building CXX object CMakeFiles/GardenEcho.dir/src/PluginEditor.cpp.o
+[2/4] Linking CXX static library "GardenEcho_artefacts/Release/libGarden Echo_SharedCode.a"
+[3/4] Linking CXX executable "GardenEcho_artefacts/Release/Standalone/Garden Echo"
+
+===== native-checks.log (actual output) =====
+PASS: first-run Leaf; Enter for all allowed choices; filtered Prism; empty Enter; view-only categories; recalled-row mouse/double-click regression; automation preserves search state and does not open browser; canonical host writes 0..12 / 0..3 and heading; visible bounds with browser open/closed at all three sizes; persistent mix unchanged.
+LIMIT: this base check does not validate screen-reader output or rendered text glyph clipping.
+
+===== native-checks-shortlist.log (actual output) =====
+PASS: first-run Leaf; Enter for all allowed choices; filtered Prism; empty Enter; view-only categories; recalled-row mouse/double-click regression; automation preserves search state and does not open browser; canonical host writes 0..12 / 0..3 and heading; visible bounds with browser open/closed at all three sizes; persistent mix unchanged.
+LIMIT: this base check does not validate screen-reader output or rendered text glyph clipping.
+
+===== capture.log (actual output) =====
+Native capture completed; inspect actual dimensions and content before acceptance.
+
+===== standalone.log (actual output) =====
+ALSA lib seq_hw.c:540:(snd_seq_hw_open) open /dev/snd/seq failed: Permission denied

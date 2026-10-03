@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "id": "effects-measure-prism",
+  "producer": "moth-hackathon-2026@4e7afa79260a478ee598f215649af1367684a0bb",
+  "evidenceMode": "atlas-live",
+  "mothbakeCommit": "b36ac00286f63c3ee4d57a632fb8909c2d189f72",
+  "assets": [
+    {
+      "id": "inline-result",
+      "role": "result",
+      "path": "assets/inline-result.json",
+      "mime": "application/json",
+      "sha256": "c7d4bebdde174d81ae81fafc9cc648c31d5ae043860370e0bd2a12015b07e3c6",
+      "sourceRunIds": [
+        "effects-measure-prism"
+      ]
+    }
+  ],
+  "runs": [
+    {
+      "id": "effects-measure-prism",
+      "engineId": "otoc-echo-v1",
+      "execution": "simulator",
+      "parameters": {
+        "machine": "aer",
+        "lattice": "chain",
+        "n_sites": 5,
+        "depth": 6,
+        "exact": true,
+        "seed": 1602,
+        "theta_x": 1.25,
+        "theta_zz": 1.35,
+        "theta_z": 0.9,
+        "disorder": 0.12,
+        "include_taps": true,
+        "min_tap_level": 0.01
+      },
+      "inputSha256": [],
+      "outputSha256": [
+        "c7d4bebdde174d81ae81fafc9cc648c31d5ae043860370e0bd2a12015b07e3c6"
+      ],
+      "jobId": "f1b34bfe-1a4f-405a-9ed5-4a0acf5fe81e"
+    }
+  ]
+}

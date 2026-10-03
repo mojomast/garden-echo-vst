@@ -1,0 +1,307 @@
+[0/2] Re-checking globbed directories...
+[1/147] Generating juce_binarydata_GardenKernels/JuceLibraryCode/BinaryData1.cpp, juce_binarydata_GardenKernels/JuceLibraryCode/BinaryData2.cpp, juce_binarydata_GardenKernels/JuceLibraryCode/BinaryData3.cpp, juce_binarydata_GardenKernels/JuceLibraryCode/BinaryData4.cpp, juce_binarydata_GardenKernels/JuceLibraryCode/GardenKernels.h
+[2/147] Building CXX object CMakeFiles/GardenKernels.dir/juce_binarydata_GardenKernels/JuceLibraryCode/BinaryData1.cpp.o
+[3/147] Building CXX object CMakeFiles/GardenKernels.dir/juce_binarydata_GardenKernels/JuceLibraryCode/BinaryData2.cpp.o
+[4/147] Building CXX object CMakeFiles/GardenKernels.dir/juce_binarydata_GardenKernels/JuceLibraryCode/BinaryData3.cpp.o
+[5/147] Building CXX object CMakeFiles/GardenKernels.dir/juce_binarydata_GardenKernels/JuceLibraryCode/BinaryData4.cpp.o
+[6/147] Linking CXX static library libGardenKernels.a
+[7/147] Building VST3 manifest helper for GardenEcho
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /workspace/moth-echo-ship/build/ship-final/vst3_helpers/GardenEcho
+[1/2] Building CXX object CMakeFiles/vst3_helper.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_plugin_client/VST3/juce_VST3ManifestHelper.cpp.o
+[2/2] Linking CXX executable vst3_helper
+[8/147] Building CXX object CMakeFiles/GardenEcho.dir/src/PluginProcessor.cpp.o
+[9/147] Building CXX object CMakeFiles/GardenEcho.dir/src/PluginEditor.cpp.o
+[10/147] Building CXX object CMakeFiles/GardenEcho.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_processors/juce_audio_processors.cpp.o
+[11/147] Building CXX object CMakeFiles/GardenEcho.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_gui_extra/juce_gui_extra.cpp.o
+[12/147] Building CXX object CMakeFiles/GardenEcho.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_gui_basics/juce_gui_basics_2.cpp.o
+[13/147] Building CXX object CMakeFiles/GardenEcho.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_gui_basics/juce_gui_basics.cpp.o
+[14/147] Building CXX object CMakeFiles/GardenEcho.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_gui_basics/juce_gui_basics_4.cpp.o
+[15/147] Building CXX object CMakeFiles/GardenEcho.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_gui_basics/juce_gui_basics_3.cpp.o
+[16/147] Building CXX object CMakeFiles/GardenEcho.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_gui_basics/juce_gui_basics_5.cpp.o
+[17/147] Building CXX object CMakeFiles/GardenEcho.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_graphics/juce_graphics.cpp.o
+[18/147] Building C object CMakeFiles/GardenEcho.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c.o
+[19/147] Building CXX object CMakeFiles/GardenEcho.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_events/juce_events.cpp.o
+[20/147] Building CXX object CMakeFiles/GardenEcho.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.o
+[21/147] Building CXX object CMakeFiles/GardenEcho.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_core/juce_core_CompilationTime.cpp.o
+[22/147] Building CXX object CMakeFiles/GardenEcho.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_data_structures/juce_data_structures.cpp.o
+[23/147] Building CXX object CMakeFiles/GardenEcho.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_processors_headless/juce_audio_processors_headless.cpp.o
+[24/147] Building CXX object CMakeFiles/GardenEcho.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_processors_headless/juce_audio_processors_headless_ara.cpp.o
+[25/147] Building CXX object CMakeFiles/GardenEcho.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_processors_headless/juce_audio_processors_headless_lv2_libs.cpp.o
+[26/147] Building CXX object CMakeFiles/GardenEcho.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_basics/juce_audio_basics.cpp.o
+[27/147] Building CXX object CMakeFiles/GardenEcho.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_core/juce_core.cpp.o
+[28/147] Building CXX object CMakeFiles/GardenEcho.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_utils/juce_audio_utils.cpp.o
+[29/147] Building CXX object CMakeFiles/GardenEcho.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_devices/juce_audio_devices.cpp.o
+[30/147] Building CXX object CMakeFiles/GardenEcho.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_formats/juce_audio_formats.cpp.o
+[31/147] Building CXX object CMakeFiles/GardenEcho_Standalone.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX.cpp.o
+[32/147] Building CXX object CMakeFiles/GardenEcho_Standalone.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX_utils.cpp.o
+[33/147] Building CXX object CMakeFiles/GardenEcho_Standalone.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_ARA.cpp.o
+[34/147] Building CXX object CMakeFiles/GardenEcho_Standalone.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_LV2.cpp.o
+[35/147] Building CXX object CMakeFiles/GardenEcho_Standalone.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_Standalone.cpp.o
+[36/147] Building CXX object CMakeFiles/GardenEcho_Standalone.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_Unity.cpp.o
+[37/147] Building CXX object CMakeFiles/GardenEcho_Standalone.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST2.cpp.o
+[38/147] Building CXX object CMakeFiles/GardenEcho_Standalone.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST3.cpp.o
+[39/147] Building CXX object CMakeFiles/GardenEcho_VST3.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX.cpp.o
+[40/147] Building CXX object CMakeFiles/GardenEcho_VST3.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX_utils.cpp.o
+[41/147] Building CXX object CMakeFiles/GardenEcho_VST3.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_ARA.cpp.o
+[42/147] Building CXX object CMakeFiles/GardenEcho_VST3.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_LV2.cpp.o
+[43/147] Building CXX object CMakeFiles/GardenEcho_VST3.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_Standalone.cpp.o
+[44/147] Building CXX object CMakeFiles/GardenEcho_VST3.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_Unity.cpp.o
+[45/147] Building CXX object CMakeFiles/GardenEcho_VST3.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST2.cpp.o
+[46/147] Building CXX object CMakeFiles/GardenEcho.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_dsp/juce_dsp.cpp.o
+[47/147] Linking CXX static library "GardenEcho_artefacts/Release/libGarden Echo_SharedCode.a"
+[48/147] Building CXX object CMakeFiles/EchoChecks.dir/tests/EchoChecks.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+/workspace/moth-echo-ship/tests/EchoChecks.cpp: In function ‘void {anonymous}::writeAudio(const juce::File&, juce::AudioBuffer<float>&, double)’:
+/workspace/moth-echo-ship/tests/EchoChecks.cpp:73:81: warning: ‘juce::AudioFormatWriter* juce::AudioFormat::createWriterFor(juce::OutputStream*, double, unsigned int, int, const juce::StringPairArray&, int)’ is deprecated: Use the function taking an AudioFormatWriterOptions instead. [-Wdeprecated-declarations]
+   73 |     auto writer = std::unique_ptr<juce::AudioFormatWriter> (wav.createWriterFor (stream.get(), rate, 2, 24, {}, 0));
+      |                                                             ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_formats/juce_audio_formats.h:127,
+                 from /workspace/moth-echo-ship/tests/EchoChecks.cpp:2:
+/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_formats/format/juce_AudioFormat.h:179:24: note: declared here
+  179 |     AudioFormatWriter* createWriterFor (OutputStream* streamToWriteTo,
+      |                        ^~~~~~~~~~~~~~~
+[49/147] Building CXX object CMakeFiles/EchoChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_utils/juce_audio_utils.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[50/147] Building CXX object CMakeFiles/GardenEcho_VST3.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST3.cpp.o
+[51/147] Building CXX object CMakeFiles/EchoChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_processors/juce_audio_processors.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[52/147] Building CXX object CMakeFiles/EchoChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_gui_extra/juce_gui_extra.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[53/147] Building CXX object CMakeFiles/EchoChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_gui_basics/juce_gui_basics_2.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[54/147] Building CXX object CMakeFiles/EchoChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_gui_basics/juce_gui_basics.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[55/147] Building CXX object CMakeFiles/EchoChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_gui_basics/juce_gui_basics_3.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[56/147] Building CXX object CMakeFiles/EchoChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_gui_basics/juce_gui_basics_4.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[57/147] Building CXX object CMakeFiles/EchoChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_gui_basics/juce_gui_basics_5.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[58/147] Building CXX object CMakeFiles/EchoChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_graphics/juce_graphics.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[59/147] Building C object CMakeFiles/EchoChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[60/147] Building CXX object CMakeFiles/EchoChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[61/147] Building CXX object CMakeFiles/EchoChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_events/juce_events.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[62/147] Building CXX object CMakeFiles/EchoChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_core/juce_core_CompilationTime.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[63/147] Building CXX object CMakeFiles/EchoChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_data_structures/juce_data_structures.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[64/147] Building CXX object CMakeFiles/EchoChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_processors_headless/juce_audio_processors_headless.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[65/147] Building CXX object CMakeFiles/EchoChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_processors_headless/juce_audio_processors_headless_ara.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[66/147] Building CXX object CMakeFiles/EchoChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_processors_headless/juce_audio_processors_headless_lv2_libs.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[67/147] Building CXX object CMakeFiles/EchoChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_basics/juce_audio_basics.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[68/147] Building CXX object CMakeFiles/EchoChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_core/juce_core.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[69/147] Building CXX object CMakeFiles/EchoChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_devices/juce_audio_devices.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[70/147] Building CXX object CMakeFiles/EchoChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_formats/juce_audio_formats.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[71/147] Building CXX object CMakeFiles/EchoChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_dsp/juce_dsp.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[72/147] Building CXX object CMakeFiles/GardenBankRender.dir/tests/GardenBankRender.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[73/147] Building CXX object CMakeFiles/GardenBankRender.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_utils/juce_audio_utils.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[74/147] Building CXX object CMakeFiles/GardenBankRender.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_processors/juce_audio_processors.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[75/147] Building CXX object CMakeFiles/GardenBankRender.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_gui_extra/juce_gui_extra.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[76/147] Building CXX object CMakeFiles/GardenBankRender.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_gui_basics/juce_gui_basics_2.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[77/147] Building CXX object CMakeFiles/GardenBankRender.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_gui_basics/juce_gui_basics.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[78/147] Building CXX object CMakeFiles/GardenBankRender.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_gui_basics/juce_gui_basics_4.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[79/147] Building CXX object CMakeFiles/GardenBankRender.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_gui_basics/juce_gui_basics_3.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[80/147] Building CXX object CMakeFiles/GardenBankRender.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_gui_basics/juce_gui_basics_5.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[81/147] Building CXX object CMakeFiles/GardenBankRender.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_graphics/juce_graphics.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[82/147] Building C object CMakeFiles/GardenBankRender.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[83/147] Building CXX object CMakeFiles/GardenBankRender.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[84/147] Building CXX object CMakeFiles/GardenBankRender.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_events/juce_events.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[85/147] Building CXX object CMakeFiles/GardenBankRender.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_core/juce_core_CompilationTime.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[86/147] Building CXX object CMakeFiles/GardenBankRender.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_data_structures/juce_data_structures.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[87/147] Building CXX object CMakeFiles/GardenBankRender.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_processors_headless/juce_audio_processors_headless.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[88/147] Building CXX object CMakeFiles/GardenBankRender.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_processors_headless/juce_audio_processors_headless_ara.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[89/147] Building CXX object CMakeFiles/GardenBankRender.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_processors_headless/juce_audio_processors_headless_lv2_libs.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[90/147] Building CXX object CMakeFiles/GardenBankRender.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_core/juce_core.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[91/147] Building CXX object CMakeFiles/GardenBankRender.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_basics/juce_audio_basics.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[92/147] Building CXX object CMakeFiles/GardenBankRender.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_devices/juce_audio_devices.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[93/147] Building CXX object CMakeFiles/GardenBankRender.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_formats/juce_audio_formats.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[94/147] Building CXX object CMakeFiles/EffectCoreChecks.dir/tests/EffectCoreChecks.cpp.o
+[95/147] Building CXX object CMakeFiles/GardenBankRender.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_dsp/juce_dsp.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[96/147] Building CXX object CMakeFiles/EffectCoreChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_utils/juce_audio_utils.cpp.o
+[97/147] Building CXX object CMakeFiles/EffectCoreChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_processors/juce_audio_processors.cpp.o
+[98/147] Building CXX object CMakeFiles/EffectCoreChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_gui_extra/juce_gui_extra.cpp.o
+[99/147] Building CXX object CMakeFiles/EffectCoreChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_gui_basics/juce_gui_basics_2.cpp.o
+[100/147] Building CXX object CMakeFiles/EffectCoreChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_gui_basics/juce_gui_basics.cpp.o
+[101/147] Building CXX object CMakeFiles/EffectCoreChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_gui_basics/juce_gui_basics_4.cpp.o
+[102/147] Building CXX object CMakeFiles/EffectCoreChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_gui_basics/juce_gui_basics_3.cpp.o
+[103/147] Building CXX object CMakeFiles/EffectCoreChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_gui_basics/juce_gui_basics_5.cpp.o
+[104/147] Building CXX object CMakeFiles/EffectCoreChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_graphics/juce_graphics.cpp.o
+[105/147] Building C object CMakeFiles/EffectCoreChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c.o
+[106/147] Building CXX object CMakeFiles/EffectCoreChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.o
+[107/147] Building CXX object CMakeFiles/EffectCoreChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_events/juce_events.cpp.o
+[108/147] Building CXX object CMakeFiles/EffectCoreChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_core/juce_core_CompilationTime.cpp.o
+[109/147] Building CXX object CMakeFiles/EffectCoreChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_data_structures/juce_data_structures.cpp.o
+[110/147] Building CXX object CMakeFiles/EffectCoreChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_processors_headless/juce_audio_processors_headless.cpp.o
+[111/147] Building CXX object CMakeFiles/EffectCoreChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_processors_headless/juce_audio_processors_headless_ara.cpp.o
+[112/147] Building CXX object CMakeFiles/EffectCoreChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_processors_headless/juce_audio_processors_headless_lv2_libs.cpp.o
+[113/147] Building CXX object CMakeFiles/EffectCoreChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_basics/juce_audio_basics.cpp.o
+[114/147] Building CXX object CMakeFiles/EffectCoreChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_core/juce_core.cpp.o
+[115/147] Building CXX object CMakeFiles/EffectCoreChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_devices/juce_audio_devices.cpp.o
+[116/147] Building CXX object CMakeFiles/EffectCoreChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_formats/juce_audio_formats.cpp.o
+[117/147] Building CXX object CMakeFiles/EffectCoreChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_dsp/juce_dsp.cpp.o
+[118/147] Building CXX object CMakeFiles/StateMigrationChecks.dir/tests/StateMigrationChecks.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[119/147] Building CXX object CMakeFiles/StateMigrationChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_utils/juce_audio_utils.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[120/147] Building CXX object CMakeFiles/StateMigrationChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_processors/juce_audio_processors.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[121/147] Building CXX object CMakeFiles/StateMigrationChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_gui_extra/juce_gui_extra.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[122/147] Building CXX object CMakeFiles/StateMigrationChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_gui_basics/juce_gui_basics_2.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[123/147] Building CXX object CMakeFiles/StateMigrationChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_gui_basics/juce_gui_basics.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[124/147] Building CXX object CMakeFiles/StateMigrationChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_gui_basics/juce_gui_basics_4.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[125/147] Building CXX object CMakeFiles/StateMigrationChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_gui_basics/juce_gui_basics_3.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[126/147] Building CXX object CMakeFiles/StateMigrationChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_gui_basics/juce_gui_basics_5.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[127/147] Building CXX object CMakeFiles/StateMigrationChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_graphics/juce_graphics.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[128/147] Building C object CMakeFiles/StateMigrationChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[129/147] Building CXX object CMakeFiles/StateMigrationChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[130/147] Building CXX object CMakeFiles/StateMigrationChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_events/juce_events.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[131/147] Building CXX object CMakeFiles/StateMigrationChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_core/juce_core_CompilationTime.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[132/147] Building CXX object CMakeFiles/StateMigrationChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_data_structures/juce_data_structures.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[133/147] Building CXX object CMakeFiles/StateMigrationChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_processors_headless/juce_audio_processors_headless.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[134/147] Building CXX object CMakeFiles/StateMigrationChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_processors_headless/juce_audio_processors_headless_ara.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[135/147] Building CXX object CMakeFiles/StateMigrationChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_processors_headless/juce_audio_processors_headless_lv2_libs.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[136/147] Building CXX object CMakeFiles/StateMigrationChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_core/juce_core.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[137/147] Building CXX object CMakeFiles/StateMigrationChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_basics/juce_audio_basics.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[138/147] Building CXX object CMakeFiles/StateMigrationChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_devices/juce_audio_devices.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[139/147] Building CXX object CMakeFiles/StateMigrationChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_audio_formats/juce_audio_formats.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[140/147] Linking CXX executable "GardenEcho_artefacts/Release/Standalone/Garden Echo"
+[141/147] Linking CXX shared module "GardenEcho_artefacts/Release/VST3/Garden Echo.vst3/Contents/x86_64-linux/Garden Echo.so"
+removing moduleinfo.json
+creating /workspace/moth-echo-ship/build/ship-final/GardenEcho_artefacts/Release/VST3/Garden Echo.vst3/Contents/Resources/moduleinfo.json
+[142/147] Linking CXX executable EchoChecks_artefacts/Release/EchoChecks
+[143/147] Linking CXX executable GardenBankRender_artefacts/Release/GardenBankRender
+[144/147] Linking CXX executable EffectCoreChecks_artefacts/Release/EffectCoreChecks
+[145/147] Building CXX object CMakeFiles/StateMigrationChecks.dir/workspace/moth-garden-echo/build/deps/JUCE/modules/juce_dsp/juce_dsp.cpp.o
+<command-line>: warning: ‘JUCE_STANDALONE_APPLICATION’ redefined
+<command-line>: note: this is the location of the previous definition
+[146/147] Linking CXX executable StateMigrationChecks_artefacts/Release/StateMigrationChecks

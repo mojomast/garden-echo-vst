@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "allSoundsIntegration": {
+    "version": "0.2.0",
+    "inventory": "submission/INVENTORY.json",
+    "musicalSounds": 15,
+    "diagnosticBehaviors": 1,
+    "studyBankManifest": "effects-bank/manifest.json",
+    "studyBankManifestSha256": "7f8bcf2ee968ede7445ac5ae205fb94ab3ba374b1f7e0556ab97668d83c6be27",
+    "studyBankRole": "12 authored local classical DSP studies; 3 authored dry cues and 36 native wet audition renders informed by separately recorded Atlas simulator assets, not plugin-side remote processing",
+    "recordedSpaceRole": "three local creative kernels from one simulator trajectory and one recorded exact-unit-impulse render, not three remote experiments or physical room measurements",
+    "finalVerification": "evidence/FINAL_RELEASE_REPORT.md",
+    "finalVst3ModuleSha256": "17ac9ffa7b2a2a5c464dc897bd40e73b3d044193b2bfb71e0c69d8cebbe8965c",
+    "finalHostOfflineRenderSha256": "c0a7484d51d6f7504a11830b95aed494f541bd7d977d8f3a5d6a3492202f779a",
+    "finalHostRender": "evidence/final-verification/final-host-render.wav",
+    "finalModuleMaxRequiredGlibcSymbol": "GLIBC_2.38",
+    "finalHostEvidenceLimit": "REAPER create GUI timed out with audio-device modal; reopen and offline render passed, but no clean editor capture or physical listening",
+    "originalStudyInputAvailability": "four referenced original input assets absent from this checkout; full study header/staging regeneration skipped",
+    "newAtlasJobsForIntegration": 0
+  },
+  "artifactHashes": {
+    "evidence/audio/garden-echo-demo.flac": "84171d46dfcf4de91d0a5df401fc4a51d989d2cb2a373001f521a2e6213af816",
+    "evidence/standalone-ui.png": "47963468a999c1f3977e398e1caa7f69ffd71060246b6d196ef9518e8fadbd03",
+    "evidence/daw/reaper-editor.png": "493f178f9da45a4522a5ea9cd85cb3387f9556e29f98053e17656f1aabb968bd",
+    "evidence/daw/garden-host-render.wav": "2574a2dd53fa53b35f0d305b62fe58cfc3ef28b7e8ca931ec35bad7ea576ccf0",
+    "evidence/daw/garden-host-smoke.rpp": "5ad944c37f89cdef66f79a3754711936d0d41580b9aa6cdf5503c7eb961a79c4",
+    "evidence/audio/leaf-chamber-dry.wav": "cb3f5b75e39f1399bc025c5d99320726d374356ef829aa54d3f34afd8113af43",
+    "evidence/audio/leaf-chamber-wet.wav": "6a36ac5fd0ab0a6463e5be09033326639a722093bfd6762a7348342d98cbed1f",
+    "evidence/audio/moss-arcade-dry.wav": "cb3f5b75e39f1399bc025c5d99320726d374356ef829aa54d3f34afd8113af43",
+    "evidence/audio/moss-arcade-wet.wav": "9887c86e63b01dd4b971e8d98dc05910f6b127c2aba376de6d3b73c55b068d7d",
+    "evidence/audio/rain-canopy-dry.wav": "cb3f5b75e39f1399bc025c5d99320726d374356ef829aa54d3f34afd8113af43",
+    "evidence/audio/rain-canopy-wet.wav": "1b85562968d85da17a8e7699002c0bcad012ce1215424bc679c0f040a2649d21"
+  },
+  "artifactHashScope": "Observed local bytes only; artifact hashes alone do not establish recorded-kernel native/host verification",
+  "historicalSyntheticArtifactHashes": {
+    "evidence/audio/garden-echo-demo.flac": "a231c0ff03268b285e4235e88b01f1c56845a0c42918d3b201eadbaca184a4b4",
+    "evidence/standalone-ui.png": "3553cf2e290d098211b55a33fa338303623ded45986c5f3290c04cc893e23aa6",
+    "evidence/daw/reaper-editor.png": "ea1873801f8cd37f4b1f65ecdc02b81e16af3a88cd9e86a8e7f6d1b606156829",
+    "evidence/daw/garden-host-render.wav": "38513bf686c4f0e474b2241c81134f7256cc0d706b0b364bfa864bc5258e6707",
+    "evidence/daw/garden-host-smoke.rpp": "c932ac07b6b0b06fa9771f022657806cc1251b34edb56ab02bfa7310856a86d2",
+    "evidence/audio/leaf-chamber-dry.wav": "c288152e0843013fb061a89d7b3efebc50d3d4fec2deda62f138df8db5f10322",
+    "evidence/audio/leaf-chamber-wet.wav": "863e6a4ff3d6afb6d1d7c78c355be4a8139d080322ebcb75fb11a1bf721baa4b",
+    "evidence/audio/moss-arcade-dry.wav": "c288152e0843013fb061a89d7b3efebc50d3d4fec2deda62f138df8db5f10322",
+    "evidence/audio/moss-arcade-wet.wav": "be2254a14eeee0755428fa774daedaf89be4ba8bda699551644415933f7cc1ae",
+    "evidence/audio/rain-canopy-dry.wav": "c288152e0843013fb061a89d7b3efebc50d3d4fec2deda62f138df8db5f10322",
+    "evidence/audio/rain-canopy-wet.wav": "0e8ab1c99f2c6029d98b554fe74d07fca7c3bc28e24fd7c021ff4a2b0b21c8a7"
+  },
+  "artifactsStillMatchingHistoricalSyntheticEvidence": [],
+  "authoringScriptHashes": {
+    "scripts/import_impulse_kernel.py": "c2e7fed77775cf069ad77a7e6211b2b264961d9cf1e40ed513e7644570e25c13",
+    "scripts/make_space_header.py": "2c3968d74660baebe9cd3c7cecebdabef51d6bc2386d138fd8f2f50642c70963",
+    "scripts/test_recorded_import.py": "c0cb3bf8b165d212d2653ba1aece07d9256de23a37fca76fd3fbc4dc061a9c50"
+  },
+  "evidenceMode": "atlas-recorded",
+  "sourceBundle": "fixtures/recorded-v1/bundle.json",
+  "sourceBundleSha256": "d86817546ca4695b2ba15d8d55ddeb070fea8beac9f45446c6aa4d6adbab4fa9",
+  "spacesSha256": "35e34ad5e13817b57ab31bb93ff70e29ab13b120266ad7f9c0ed7ad6104197ea",
+  "atlasJobIds": [
+    "1c7f2c4b-e11f-4d06-92e6-88356c6c6777",
+    "5e4da3b1-32fc-4b67-96e7-cb4fbb422249"
+  ],
+  "execution": "simulator (aer/emu), not hardware",
+  "remoteRenderCount": 1,
+  "remoteTrajectoryCount": 1,
+  "curatedPresetCount": 3,
+  "claim": "Three locally curated sparse creative kernels from one remote explicit-unit-impulse render and one simulator trajectory; not independent experiments or measured rooms",
+  "remoteVerification": "Archived hub GET/re-download attestation; this importer performs offline verification only",
+  "sourceHashes": {
+    "fixtures/recorded-v1/sources/RELEASE_INDEX.json": "14d7fd6fa5c736831f749b96387205543df2bb476a41cda9f82db58728a0986a",
+    "fixtures/recorded-v1/sources/evidence/atlas-release-verification.json": "8f4169c752a20b9ea0c9e96fa541e94b3756912aa6c2f63a10ccef2b19167856",
+    "fixtures/recorded-v1/sources/live-jobs/inputs/echo-trajectory.json": "ae7549afcd890bef2274361c8b0aef888777729c5b97e07db8bffc5b85526d11",
+    "fixtures/recorded-v1/sources/live-jobs/inputs/echo-trajectory.lineage.json": "968b7ceacede96168e7793b52e682cfc4d0e2dda23caaee79a213fc0249e5b50",
+    "fixtures/recorded-v1/sources/live-jobs/inputs/unit-impulse-float32.lineage.json": "77aa6e4c73d4d59a45c76dbc7725798392c6add437cdb7f81168bf6a31dcc8cb",
+    "fixtures/recorded-v1/sources/live-jobs/inputs/unit-impulse-float32.wav": "61f315bb803843cf4218267115ca09eb39c4cd34ee37e229e514b5c2243a637d",
+    "fixtures/recorded-v1/sources/releases/echo-explicit-impulse/assets/ir.json": "8e1ef3e5c81a5ca14c158dd8e2a2cc907fa3bb8fd7488b5708a1ae5a99f9f3d3",
+    "fixtures/recorded-v1/sources/releases/echo-explicit-impulse/assets/result.wav": "49e7bd3fb9504b2bb86c2f61cd6681ff9fd6a7a93afba6fa835192be7ebd2dfa",
+    "fixtures/recorded-v1/sources/releases/echo-explicit-impulse/assets/taps.json": "aeb334262d2c1ea7f6168250e4f1afd0e51fa5747668c584afc8faa992f88cd3",
+    "fixtures/recorded-v1/sources/releases/echo-explicit-impulse/pack.json": "be5314372045ac92d7b5d3c2ecd6d7566de2913a0546d81e80a74973fec12c3a",
+    "fixtures/recorded-v1/sources/releases/echo-measure/assets/inline-result.json": "ce0ef77feeb02fd4832613f4e3f6c67ad9f8c3006e8b67a3fdc3c474b4a3e226",
+    "fixtures/recorded-v1/sources/releases/echo-measure/pack.json": "a1e7fcc86ef043ed7129d6c83841ff34826d914a21be3d230a81e7ce5e02cbda"
+  },
+  "kernelHashes": {
+    "fixtures/recorded-v1/leaf-chamber.wav": "2318c94161fc9260b527fd7699385b39f6e1ab2ceaeab7532a4033285a885a57",
+    "fixtures/recorded-v1/moss-arcade.wav": "c5cd94b2603c5601dae5208e17380ea75190e945d09b08e0d72e65a2f0d58ebb",
+    "fixtures/recorded-v1/rain-canopy.wav": "8a1d994184a11afe7cf6cbe16df5781a79d674db797f6152a3e995648bb68f70"
+  },
+  "sourceSignal": {
+    "channels": 2,
+    "sampleRate": 22050,
+    "frames": 44100,
+    "durationSeconds": 2.0,
+    "peak": 0.7557339668273926,
+    "rms": 0.003816034869661791,
+    "meanPerChannel": [
+      -1.9894297659194388e-05,
+      -1.8628475820126178e-05
+    ],
+    "l1PerChannel": [
+      0.8831016141921282,
+      1.8089459091424942
+    ],
+    "nonzeroSamples": 8,
+    "clippedSamples": 0,
+    "allFinite": true
+  },
+  "truthReview": "evidence/recorded-source-audit.md",
+  "nativeVerificationScope": "This file verifies recorded authoring lineage only; native tests, pluginval and DAW evidence require their own recorded-mode report"
+}

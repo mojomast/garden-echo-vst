@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "effects-field-filter",
+  "producer": "moth-hackathon-2026@4e7afa79260a478ee598f215649af1367684a0bb",
+  "evidenceMode": "atlas-live",
+  "mothbakeCommit": "b36ac00286f63c3ee4d57a632fb8909c2d189f72",
+  "assets": [
+    {
+      "id": "inline-result",
+      "role": "result",
+      "path": "assets/inline-result.json",
+      "mime": "application/json",
+      "sha256": "ce21312b132dfe770be1f92a097e1c26cdf7a649614e81d3a7a7e77ea512e5f3",
+      "sourceRunIds": [
+        "effects-field-filter"
+      ]
+    }
+  ],
+  "runs": [
+    {
+      "id": "effects-field-filter",
+      "engineId": "blur-core-v1",
+      "execution": "simulator",
+      "parameters": {
+        "values": [
+          1,
+          0.4,
+          0.12,
+          0.03,
+          0.008,
+          0.004,
+          0.002,
+          0.001,
+          0.001,
+          0.002,
+          0.004,
+          0.008,
+          0.03,
+          0.12,
+          0.4,
+          1
+        ],
+        "axes": [
+          0
+        ],
+        "style": "xy",
+        "strength": 0.72,
+        "reach": 0.16,
+        "shots": null,
+        "max_qubits": 4
+      },
+      "inputSha256": [
+        "b0266ce9fe1af7b82b135a7b538c00bc5b874a2e4f49e64d9d7d2833d74828b2"
+      ],
+      "outputSha256": [
+        "ce21312b132dfe770be1f92a097e1c26cdf7a649614e81d3a7a7e77ea512e5f3"
+      ],
+      "jobId": "0ec078f9-d0e6-4dc3-a607-38b9053c5524"
+    }
+  ]
+}

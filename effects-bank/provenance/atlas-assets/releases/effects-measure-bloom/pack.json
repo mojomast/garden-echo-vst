@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "id": "effects-measure-bloom",
+  "producer": "moth-hackathon-2026@4e7afa79260a478ee598f215649af1367684a0bb",
+  "evidenceMode": "atlas-live",
+  "mothbakeCommit": "b36ac00286f63c3ee4d57a632fb8909c2d189f72",
+  "assets": [
+    {
+      "id": "inline-result",
+      "role": "result",
+      "path": "assets/inline-result.json",
+      "mime": "application/json",
+      "sha256": "88b57011686f56e26e73c44d7759644876a16b0162ba9fc6645bd8cd65d47112",
+      "sourceRunIds": [
+        "effects-measure-bloom"
+      ]
+    }
+  ],
+  "runs": [
+    {
+      "id": "effects-measure-bloom",
+      "engineId": "otoc-echo-v1",
+      "execution": "simulator",
+      "parameters": {
+        "machine": "aer",
+        "lattice": "chain",
+        "n_sites": 5,
+        "depth": 6,
+        "exact": true,
+        "seed": 1601,
+        "theta_x": 0.42,
+        "theta_zz": 0.7853981633974483,
+        "theta_z": 0,
+        "disorder": 0,
+        "include_taps": true,
+        "min_tap_level": 0.01
+      },
+      "inputSha256": [],
+      "outputSha256": [
+        "88b57011686f56e26e73c44d7759644876a16b0162ba9fc6645bd8cd65d47112"
+      ],
+      "jobId": "2c4903cc-3fba-4c08-b8b6-ba45af14eb98"
+    }
+  ]
+}

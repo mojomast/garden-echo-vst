@@ -1,0 +1,80 @@
+{
+  "evidenceMode": "atlas-recorded",
+  "spaces": [
+    {
+      "id": "leaf-chamber",
+      "name": "Leaf Chamber",
+      "file": "leaf-chamber.wav",
+      "description": "Original timing / sparse signed echo",
+      "kernelSha256": "2318c94161fc9260b527fd7699385b39f6e1ab2ceaeab7532a4033285a885a57",
+      "tapsSecondsLeftRight": [
+        [
+          0.18,
+          -0.12378757307305932,
+          -0.2629002588801086
+        ],
+        [
+          0.36,
+          -0.09951631678268313,
+          -0.35510949697345495
+        ],
+        [
+          0.54,
+          -0.1902999971061945,
+          0.118342156521976
+        ]
+      ],
+      "provenance": "ATLAS RECORDED / local variation of ONE impulse render / simulator / job 1c7f2c4b-e11f-4d06-92e6-88356c6c6777"
+    },
+    {
+      "id": "moss-arcade",
+      "name": "Moss Arcade",
+      "file": "moss-arcade.wav",
+      "description": "Two-thirds timing / gently damped echo",
+      "kernelSha256": "c5cd94b2603c5601dae5208e17380ea75190e945d09b08e0d72e65a2f0d58ebb",
+      "tapsSecondsLeftRight": [
+        [
+          0.12,
+          -0.1421188823878765,
+          -0.3018323238939047
+        ],
+        [
+          0.24,
+          -0.09997170092537999,
+          -0.35673446860164404
+        ],
+        [
+          0.36,
+          -0.1672744546085596,
+          0.10402322607114911
+        ]
+      ],
+      "provenance": "ATLAS RECORDED / local variation of ONE impulse render / simulator / job 1c7f2c4b-e11f-4d06-92e6-88356c6c6777"
+    },
+    {
+      "id": "rain-canopy",
+      "name": "Rain Canopy",
+      "file": "rain-canopy.wav",
+      "description": "Slower inverted / damped stereo swap",
+      "kernelSha256": "8a1d994184a11afe7cf6cbe16df5781a79d674db797f6152a3e995648bb68f70",
+      "tapsSecondsLeftRight": [
+        [
+          0.22498866213151927,
+          0.3471330641768873,
+          0.1634489055722952
+        ],
+        [
+          0.44997732426303855,
+          0.3516644914634526,
+          0.09855088451877236
+        ],
+        [
+          0.6750113378684808,
+          -0.0878955670632422,
+          0.1413403870537877
+        ]
+      ],
+      "provenance": "ATLAS RECORDED / local variation of ONE impulse render / simulator / job 1c7f2c4b-e11f-4d06-92e6-88356c6c6777"
+    }
+  ]
+}

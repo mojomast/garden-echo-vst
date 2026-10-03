@@ -1,0 +1,348 @@
+{
+  "schemaVersion": 1,
+  "runs": [
+    {
+      "id": "effects-measure-bloom",
+      "engineId": "otoc-echo-v1",
+      "jobId": "2c4903cc-3fba-4c08-b8b6-ba45af14eb98",
+      "params": {
+        "machine": "aer",
+        "lattice": "chain",
+        "n_sites": 5,
+        "depth": 6,
+        "exact": true,
+        "seed": 1601,
+        "theta_x": 0.42,
+        "theta_zz": 0.7853981633974483,
+        "theta_z": 0,
+        "disorder": 0,
+        "include_taps": true,
+        "min_tap_level": 0.01
+      },
+      "execution": "simulator",
+      "assets": [
+        {
+          "role": "result",
+          "path": "releases/effects-measure-bloom/assets/inline-result.json",
+          "sha256": "88b57011686f56e26e73c44d7759644876a16b0162ba9fc6645bd8cd65d47112"
+        },
+        {
+          "role": "pack",
+          "path": "releases/effects-measure-bloom/pack.json",
+          "sha256": "32e6dfaba0ff594be00f3e362c30132de93990ac63c95768ef4b8beeae3b01df"
+        }
+      ]
+    },
+    {
+      "id": "effects-measure-prism",
+      "engineId": "otoc-echo-v1",
+      "jobId": "f1b34bfe-1a4f-405a-9ed5-4a0acf5fe81e",
+      "params": {
+        "machine": "aer",
+        "lattice": "chain",
+        "n_sites": 5,
+        "depth": 6,
+        "exact": true,
+        "seed": 1602,
+        "theta_x": 1.25,
+        "theta_zz": 1.35,
+        "theta_z": 0.9,
+        "disorder": 0.12,
+        "include_taps": true,
+        "min_tap_level": 0.01
+      },
+      "execution": "simulator",
+      "assets": [
+        {
+          "role": "result",
+          "path": "releases/effects-measure-prism/assets/inline-result.json",
+          "sha256": "c7d4bebdde174d81ae81fafc9cc648c31d5ae043860370e0bd2a12015b07e3c6"
+        },
+        {
+          "role": "pack",
+          "path": "releases/effects-measure-prism/pack.json",
+          "sha256": "e1d09885fcfb40dc882607decd71474ae1c02cb8828a562db276eb830e18f502"
+        }
+      ]
+    },
+    {
+      "id": "effects-measure-fracture",
+      "engineId": "otoc-echo-v1",
+      "jobId": "3cf48307-d6f0-4941-88a9-b00d5a637b8b",
+      "params": {
+        "machine": "aer",
+        "lattice": "chain",
+        "n_sites": 5,
+        "depth": 6,
+        "exact": true,
+        "seed": 1603,
+        "theta_x": 2.2,
+        "theta_zz": 2.1,
+        "theta_z": 0.45,
+        "disorder": 0.48,
+        "include_taps": true,
+        "min_tap_level": 0.01
+      },
+      "execution": "simulator",
+      "assets": [
+        {
+          "role": "result",
+          "path": "releases/effects-measure-fracture/assets/inline-result.json",
+          "sha256": "9e8890cb2c15195b945800ec7a527e191d13025669ff24e1a46b96027f82c58e"
+        },
+        {
+          "role": "pack",
+          "path": "releases/effects-measure-fracture/pack.json",
+          "sha256": "e99dfdbf580170cd57625af31ab0d7e255fa78570855861801c59f837f70ef25"
+        }
+      ]
+    },
+    {
+      "id": "effects-field-filter",
+      "engineId": "blur-core-v1",
+      "jobId": "0ec078f9-d0e6-4dc3-a607-38b9053c5524",
+      "params": {
+        "values": [
+          1,
+          0.4,
+          0.12,
+          0.03,
+          0.008,
+          0.004,
+          0.002,
+          0.001,
+          0.001,
+          0.002,
+          0.004,
+          0.008,
+          0.03,
+          0.12,
+          0.4,
+          1
+        ],
+        "axes": [
+          0
+        ],
+        "style": "xy",
+        "strength": 0.72,
+        "reach": 0.16,
+        "shots": null,
+        "max_qubits": 4
+      },
+      "execution": "simulator",
+      "assets": [
+        {
+          "role": "result",
+          "path": "releases/effects-field-filter/assets/inline-result.json",
+          "sha256": "ce21312b132dfe770be1f92a097e1c26cdf7a649614e81d3a7a7e77ea512e5f3"
+        },
+        {
+          "role": "pack",
+          "path": "releases/effects-field-filter/pack.json",
+          "sha256": "5fcd842e261375fce34ed062342384e9e206c9e34a973255dbc20c714f719dae"
+        }
+      ]
+    },
+    {
+      "id": "effects-field-rhythm",
+      "engineId": "blur-core-v1",
+      "jobId": "09dc8ac7-7fa6-4397-bfaf-b3ebaef90688",
+      "params": {
+        "values": [
+          1,
+          0.01,
+          0.01,
+          0.01,
+          0.72,
+          0.01,
+          0.01,
+          0.01,
+          0.54,
+          0.01,
+          0.01,
+          0.01,
+          0.81,
+          0.01,
+          0.01,
+          0.01
+        ],
+        "axes": [
+          0
+        ],
+        "style": "xy",
+        "strength": 0.59,
+        "reach": 0.31,
+        "shots": null,
+        "max_qubits": 4
+      },
+      "execution": "simulator",
+      "assets": [
+        {
+          "role": "result",
+          "path": "releases/effects-field-rhythm/assets/inline-result.json",
+          "sha256": "743da9ebe4f0145b3e12a201ca023ba1f3d3dfffe4ae8cc28e8585a17bd8a22b"
+        },
+        {
+          "role": "pack",
+          "path": "releases/effects-field-rhythm/pack.json",
+          "sha256": "605c4909775187a9f6e445d627815cef67aac8dc644a367623e1bef1583655b9"
+        }
+      ]
+    },
+    {
+      "id": "effects-render-bloom",
+      "engineId": "retrocausal-echo-v1",
+      "jobId": "3bdab79b-5e6a-4462-9876-fb26e612530b",
+      "params": {
+        "machine": "aer",
+        "emit": "audio",
+        "output_format": "float_32",
+        "sr": 22050,
+        "master_ms": 960,
+        "mix": 1,
+        "feedback": 0,
+        "negative_mode": "invert",
+        "tail_ms": 0,
+        "min_level": 0.02,
+        "decay": 0.93,
+        "stereo_width": 1
+      },
+      "execution": "simulator",
+      "assets": [
+        {
+          "role": "ir",
+          "path": "releases/effects-render-bloom/assets/ir.json",
+          "sha256": "a8439976e127790bb87193f0fede93c2220d0004d6bdc64a14c4352c1310a713"
+        },
+        {
+          "role": "result",
+          "path": "releases/effects-render-bloom/assets/result.wav",
+          "sha256": "db897b542aa8fecae3401f32631de7f869603da35862ccd7f28041925d8b128e"
+        },
+        {
+          "role": "taps",
+          "path": "releases/effects-render-bloom/assets/taps.json",
+          "sha256": "799313cd8d1192b74175f7c5c6ff9232f54232cf8013c2503a5f2aff7b63a9d8"
+        },
+        {
+          "role": "pack",
+          "path": "releases/effects-render-bloom/pack.json",
+          "sha256": "2161875c30e5427de2fc5e254db42c001bad290138b1f1f68a46a0183ff3c758"
+        }
+      ]
+    },
+    {
+      "id": "effects-render-prism",
+      "engineId": "retrocausal-echo-v1",
+      "jobId": "3760f5ca-872a-4524-a142-9eb38a634387",
+      "params": {
+        "machine": "aer",
+        "emit": "audio",
+        "output_format": "float_32",
+        "sr": 22050,
+        "master_ms": 1260,
+        "mix": 1,
+        "feedback": 0,
+        "negative_mode": "phase",
+        "tail_ms": 0,
+        "min_level": 0.015,
+        "decay": 0.94,
+        "stereo_width": 1
+      },
+      "execution": "simulator",
+      "assets": [
+        {
+          "role": "ir",
+          "path": "releases/effects-render-prism/assets/ir.json",
+          "sha256": "45907495ffd003bcff2ac5859549ed2b83d115aa27a3001148e5d2f3422810b5"
+        },
+        {
+          "role": "result",
+          "path": "releases/effects-render-prism/assets/result.wav",
+          "sha256": "c3f56fe24cbdd67d349bebe2e1c0a3da41f103aeedaabf5395397012e7f75990"
+        },
+        {
+          "role": "taps",
+          "path": "releases/effects-render-prism/assets/taps.json",
+          "sha256": "c06c9906155267f5f70d904ec1d3abc62f1e443ac00b20e82a57c856bb862bf9"
+        },
+        {
+          "role": "pack",
+          "path": "releases/effects-render-prism/pack.json",
+          "sha256": "66c6e9a6d1a0996541a4f942ea8f573b3c980aa91361f282e4f9e00516a5e205"
+        }
+      ]
+    },
+    {
+      "id": "effects-render-fracture",
+      "engineId": "retrocausal-echo-v1",
+      "jobId": "a6a63a31-c95d-46a0-82f8-3478a26dfab6",
+      "params": {
+        "machine": "aer",
+        "emit": "audio",
+        "output_format": "float_32",
+        "sr": 22050,
+        "master_ms": 1560,
+        "mix": 1,
+        "feedback": 0,
+        "negative_mode": "invert",
+        "tail_ms": 0,
+        "min_level": 0.012,
+        "decay": 0.9,
+        "stereo_width": 1
+      },
+      "execution": "simulator",
+      "assets": [
+        {
+          "role": "ir",
+          "path": "releases/effects-render-fracture/assets/ir.json",
+          "sha256": "6c107798963b1a67062d793f3484960cad2671b0b41e48d9ab49d52d8bfb23d0"
+        },
+        {
+          "role": "result",
+          "path": "releases/effects-render-fracture/assets/result.wav",
+          "sha256": "e738907bbb2fc3c1793b7c6338afb16e46328cbe298ae8775efee50d6455476f"
+        },
+        {
+          "role": "taps",
+          "path": "releases/effects-render-fracture/assets/taps.json",
+          "sha256": "1bcb954750ed5323634405f98f15f3d7e26504a8c375c3b88e839e7e19894033"
+        },
+        {
+          "role": "pack",
+          "path": "releases/effects-render-fracture/pack.json",
+          "sha256": "b7ebcba569c69798016c8dbebe8d195474f28ea599344777ff6d59d74a555abe"
+        }
+      ]
+    }
+  ],
+  "inputAssets": [
+    {
+      "role": "exact-extracted-trajectory",
+      "path": "inputs/effects-bloom-trajectory.json",
+      "sha256": "5afd831d91be4acb1269055717f4c5ebe5b3415f4df7ba23c86c5339aa87e2ea"
+    },
+    {
+      "role": "exact-extracted-trajectory",
+      "path": "inputs/effects-prism-trajectory.json",
+      "sha256": "df19ad2c95e87aa037d8cd5d3d1ed16cc16aef536b598b16ea2c48f9ac334e80"
+    },
+    {
+      "role": "exact-extracted-trajectory",
+      "path": "inputs/effects-fracture-trajectory.json",
+      "sha256": "43e883dff408a8c3f1fb466ba43c2d13d0aa4227f223e08591f9504a2603760b"
+    },
+    {
+      "role": "exact-uploaded-unit-impulse",
+      "path": "inputs/unit-impulse-float32.wav",
+      "sha256": "61f315bb803843cf4218267115ca09eb39c4cd34ee37e229e514b5c2243a637d"
+    }
+  ],
+  "verification": {
+    "method": "Fresh remote GET status/result and binary downloads or canonical sanitized JSON, followed by local pack validation",
+    "evidencePath": "evidence/effects-atlas-verification.json",
+    "processedCreditsReserved": 11,
+    "processingJobs": 8,
+    "backend": "Aer simulator"
+  }
+}
