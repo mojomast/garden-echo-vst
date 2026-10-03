@@ -1,0 +1,3 @@
+# Source, provenance, and DAW session hashes refer to exact committed bytes.
+# Never let platform Git settings rewrite LF or mixed-CRLF files at checkout.
+* -text

@@ -33,6 +33,16 @@ INPUTS = {
 }
 NAMES = {"leaf-chamber": "Leaf Chamber", "moss-arcade": "Moss Arcade", "rain-canopy": "Rain Canopy"}
 MAX_BYTES = 12_000_000
+# These are the archived metadata values for the hash-pinned render, not DSP
+# coefficients. Apple's libm and glibc round log10 differently by one ULP for
+# two gains; keeping the reviewed dB spellings makes bundle.json reproducible.
+# The exact gain pins below prevent a new render/transform from inheriting old
+# metadata, and the log10 check guards against a mistyped archived dB value.
+RECORDED_GAIN_DB = {
+    "leaf-chamber": ("0x1.e12a089ad85c3p-2", "-0x1.a3d9388326201p+2"),
+    "moss-arcade": ("0x1.143589f5c58d9p-1", "-0x1.5714b32beecd7p+2"),
+    "rain-canopy": ("0x1.3daa0906e875ap-1", "-0x1.09589de6b888fp+2"),
+}
 
 
 def require(condition, message):
@@ -199,7 +209,16 @@ def verify_sources(root):
 
 
 def write_json(path, data):
-    path.write_text(json.dumps(data, indent=2, allow_nan=False) + "\n")
+    path.write_bytes((json.dumps(data, indent=2, allow_nan=False) + "\n").encode("utf-8"))
+
+
+def recorded_gain_db(slug, gain):
+    gain_hex, db_hex = RECORDED_GAIN_DB[slug]
+    require(gain.hex() == gain_hex, "recorded normalization gain changed: " + slug)
+    db = float.fromhex(db_hex)
+    require(abs(20 * math.log10(gain) - db) <= 2 * math.ulp(db),
+            "recorded gain dB is inconsistent: " + slug)
+    return db
 
 
 def curate(slug, render, output):
@@ -239,7 +258,7 @@ def curate(slug, render, output):
     strongest = sorted(sorted(actual_events, key=lambda e: (-max(abs(e[1]), abs(e[2])), e[0]))[:3])
     return {"id": slug, "file": output.name, "stagedKernelSha256": sha(output),
             "sampleRate": rate, "frames": frames, "gainApplied": gain,
-            "gainDb": 20 * math.log10(gain), "originalPeak": max(map(abs, render[3])),
+            "gainDb": recorded_gain_db(slug, gain), "originalPeak": max(map(abs, render[3])),
             "transform": {"version": 1, "source": "actual decoded remote result.wav nonzero frames",
                           "timeScaleNumerator": numerator, "timeScaleDenominator": denominator,
                           "delayRounding": "nearest frame, ties to even",

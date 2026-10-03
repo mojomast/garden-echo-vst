@@ -86,6 +86,9 @@ These are **suggested starting positions**, not tested mix settings or verified 
 
 ## Installation and compatibility
 
+See the [three-platform installation guide](docs/INSTALLATION.md) for choosing
+the correct native package, upgrades, runtime dependencies and macOS restrictions.
+
 There is **no public binary download linked here**. If you have an owner-authorized review archive, extract it first, then run from its extracted root (which contains `Garden Echo.vst3`):
 
 ```sh

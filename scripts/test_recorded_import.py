@@ -11,6 +11,7 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 from import_impulse_kernel import (build_snapshot, check_impulse, events, read_wav,
                                    safe_file, sha, verify_snapshot, verify_sources)
@@ -50,9 +51,32 @@ class RecordedImportChecks(unittest.TestCase):
             build_snapshot(SOURCES, output)
         expected = {str(p.relative_to(FIXTURE)): sha(p) for p in FIXTURE.rglob("*") if p.is_file()}
         actual = {str(p.relative_to(output)): sha(p) for p in output.rglob("*") if p.is_file()}
-        self.assertEqual(actual, expected)
+        self.assertEqual(actual, expected,
+                         "snapshot byte mismatch by file: " + repr({name: (expected.get(name), actual.get(name))
+                                                                  for name in sorted(expected.keys() | actual.keys())
+                                                                  if expected.get(name) != actual.get(name)}))
         self.assertTrue(all(p.stat().st_mode & 0o222 == 0 for p in (output / "sources").rglob("*") if p.is_file()))
         verify_snapshot(output)
+
+    def test_platform_log10_one_ulp_drift_preserves_exact_recorded_bundle(self):
+        original_log10 = math.log10
+        for direction, target in (("up", math.inf), ("down", -math.inf)):
+            with self.subTest(direction=direction):
+                gain = 0.4698869080076202
+                self.assertNotEqual(20 * (math.nextafter(20 * original_log10(gain), target) / 20),
+                                    20 * original_log10(gain))
+
+                def alternate_log10(gain):
+                    # Simulate a one-ULP difference in the resulting dB metadata.
+                    return math.nextafter(20 * original_log10(gain), target) / 20
+
+                output = self.work / ("other-libm-" + direction)
+                with patch("import_impulse_kernel.math.log10", side_effect=alternate_log10):
+                    with contextlib.redirect_stdout(io.StringIO()):
+                        build_snapshot(SOURCES, output)
+                self.assertEqual(sha(output / "bundle.json"), sha(FIXTURE / "bundle.json"))
+                self.assertTrue(all(p.stat().st_mode & 0o222 == 0 for p in (output / "sources").rglob("*") if p.is_file()))
+                verify_snapshot(output)
 
     def test_final_taps_and_transform_are_actual_audio(self):
         bundle, metadata = verify_snapshot(FIXTURE)
