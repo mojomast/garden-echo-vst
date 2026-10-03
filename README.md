@@ -1,8 +1,24 @@
 # Garden Echo
 
-**A garden of stereo echoes, moving colour and spacious delays.** Garden Echo 0.2.0 is a native VST3 effect for Linux x86_64: choose from 15 musical sounds, then shape how much of the original track remains. Three impulse-derived creative spaces sit alongside twelve locally authored classical-DSP studies. **Unit impulse** is a separate alignment diagnostic, not a preset for music.
+**A garden of stereo echoes, moving colour and spacious delays.** Garden Echo 0.2.0 is a native stereo VST3 effect: choose from 15 musical sounds, then shape how much of the original track remains. Three impulse-derived creative spaces sit alongside twelve locally authored classical-DSP studies. **Unit impulse** is a separate alignment diagnostic, not a preset for music.
 
 > **Status:** open-source release candidate. A packaged binary is not offered from this page, and no contest submission is claimed. The owner has approved public source and included-media redistribution. Binary distribution and physical listening remain separate release gates. See [release status](docs/PUBLIC_RELEASE_STATUS.md).
+
+### Native binary targets
+
+VST3 standardizes the plugin interface, **not the compiled machine code**. Use
+the bundle built for your OS and processor; changing its filename cannot convert it.
+
+| Target | Current validation boundary |
+|---|---|
+| Linux x86_64 | Local CTest and pluginval strictness 5 passed; review module requires GLIBC_2.38. |
+| Windows x64 | Native build and CTest workflow prepared; results are not yet claimed. |
+| macOS universal | Intel + Apple Silicon build, architecture checks and native tests on both runner types prepared; results are not yet claimed. |
+
+Follow [native build runs](https://github.com/mojomast/garden-echo-vst/actions/workflows/native-vst3.yml)
+and [packaging instructions](docs/NATIVE_PACKAGING.md). Build artifacts are
+candidates, not DAW/listening certification. macOS signing/notarization is a
+separate distribution step; no Developer ID credentials are embedded here.
 
 ![Garden Echo native editor at 900 × 730: Leaf Chamber, signed stereo tap map, sound browser and common controls](evidence/ui/component-900x730.png)
 
@@ -85,6 +101,19 @@ rm -rf -- "$HOME/.vst3/Garden Echo.vst3"
 ```
 
 The candidate was tested on Linux x86_64; the final module's maximum observed required symbol is **GLIBC_2.38**. This is a compatibility floor indicator, **not a guarantee** on every distro with that glibc. Older Linux systems and physical audio hardware have not been validated. No Windows, macOS or AU binary is packaged or claimed. The standalone build is diagnostic, not the VST3 deliverable.
+
+For an eventual **Windows x64** candidate, close the host and copy the whole
+`Garden Echo.vst3` bundle into `C:\Program Files\Common Files\VST3\` (administrator
+permission may be required), then rescan. A host-specific user VST3 folder is
+an alternative only if your host supports it. Remove only that named bundle to
+uninstall. A Microsoft Visual C++ runtime may be required; inspect the candidate's
+dependency receipt rather than assuming it is self-contained.
+
+For an eventual **macOS universal** candidate, close the host and copy the whole
+bundle into `~/Library/Audio/Plug-Ins/VST3/`, then rescan. Remove only that bundle
+to uninstall. Universal means **two macOS CPU slices**, not Windows/Linux support.
+Unsigned or ad-hoc-signed candidates are not Developer ID signed or notarized;
+Gatekeeper/host policy may block them. Do not disable system security globally.
 
 ## Sessions, performance and problems
 

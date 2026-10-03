@@ -1,4 +1,6 @@
 {
+  "snapshotCommit": "ef6550fd1eec1526149e1ca3a9d136ee22e83a8c",
+  "scope": "Historical initial public source export only; not a checksum index for later revisions.",
   "files": {
     ".gitignore": {
       "bytes": 185,

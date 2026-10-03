@@ -2,17 +2,29 @@ cmake_minimum_required(VERSION 3.22)
 project(GardenEcho VERSION 0.2.0 LANGUAGES C CXX)
 
 # JUCE is pinned to 8.0.15 / 91ad83ae34a81e0833b1a2b0866f54846370ae53.
-# Install it separately or set JUCE_ROOT to a checkout at exactly that commit.
+# Supply that checkout or its verified corresponding-source archive.
 set(JUCE_ROOT "" CACHE PATH "Path to pinned JUCE 8.0.15 checkout")
 if(NOT EXISTS "${JUCE_ROOT}/CMakeLists.txt")
     message(FATAL_ERROR "Set -DJUCE_ROOT=/path/to/JUCE-8.0.15")
 endif()
-execute_process(COMMAND git -C "${JUCE_ROOT}" rev-parse HEAD
-    OUTPUT_VARIABLE JUCE_COMMIT OUTPUT_STRIP_TRAILING_WHITESPACE ERROR_QUIET)
-if(NOT JUCE_COMMIT STREQUAL "91ad83ae34a81e0833b1a2b0866f54846370ae53")
-    message(FATAL_ERROR "Expected JUCE 8.0.15 commit 91ad83ae34a81e0833b1a2b0866f54846370ae53, got ${JUCE_COMMIT}")
-endif()
 find_package(Python3 COMPONENTS Interpreter REQUIRED)
+execute_process(COMMAND "${Python3_EXECUTABLE}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/scripts/verify_juce_source.py" --root "${JUCE_ROOT}"
+    RESULT_VARIABLE JUCE_SOURCE_RESULT)
+if(NOT JUCE_SOURCE_RESULT EQUAL 0)
+    message(FATAL_ERROR "Expected verified JUCE 8.0.15 source at commit 91ad83ae34a81e0833b1a2b0866f54846370ae53")
+endif()
+# Rebuilds must not publish the author's or runner's absolute source paths.
+# Apply before JUCE is added so its compiled modules and helpers are covered.
+if(MSVC)
+    add_compile_options("/utf-8" "/pathmap:${CMAKE_CURRENT_SOURCE_DIR}=/usr/src/garden-echo-vst"
+                        "/pathmap:${JUCE_ROOT}=/usr/src/JUCE"
+                        "/pathmap:${CMAKE_CURRENT_BINARY_DIR}=/usr/src/garden-echo-build")
+else()
+    add_compile_options("-ffile-prefix-map=${CMAKE_CURRENT_SOURCE_DIR}=/usr/src/garden-echo-vst"
+                        "-ffile-prefix-map=${JUCE_ROOT}=/usr/src/JUCE"
+                        "-ffile-prefix-map=${CMAKE_CURRENT_BINARY_DIR}=/usr/src/garden-echo-build")
+endif()
 set(GARDEN_SPACES_DIR "${CMAKE_CURRENT_SOURCE_DIR}/fixtures/recorded-v1" CACHE PATH
     "Immutable three-space build snapshot (use fixtures/synthetic-v1 explicitly for diagnostics)")
 set(SPACE_SNAPSHOT_FILES spaces.json leaf-chamber.wav moss-arcade.wav rain-canopy.wav)

@@ -43,6 +43,21 @@ paths. Those paths describe earlier test layouts, not locations guaranteed to
 exist on your machine; project fixtures may need path remapping before reopening.
 Sanitized logs preserve test values but are not byte-identical private originals.
 
+## Native platform expansion
+
+Requested targets are Linux x86_64, Windows x64 and macOS universal (arm64 plus
+x86_64). The manually dispatched CI workflow builds real native bundles, runs
+CTest, checks binary architecture and only then uploads candidate packages.
+The exact universal test executables must pass on both Apple Silicon and Intel
+runners before the macOS package step. Configuration is not a successful build;
+no new platform result is claimed until its actual run completes.
+
+No automatic release publication, paid runner purchase or signing-credential
+use is configured. A compiled unsigned/ad-hoc macOS bundle is not a notarized
+consumer download. Package corresponding source includes pinned JUCE source;
+its file/tree verification also permits building from an archive without Git
+history. See [native packaging](NATIVE_PACKAGING.md).
+
 ## Before a binary release or contest submission
 
 1. Build and test the exact source revision; hash the entire bundle and package.

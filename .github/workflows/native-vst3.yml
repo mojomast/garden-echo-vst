@@ -1,0 +1,333 @@
+name: Native VST3 validation and candidate archives
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+env:
+  JUCE_REV: 91ad83ae34a81e0833b1a2b0866f54846370ae53
+  # Pin the JUCE 8.0.15 tag then verify its commit, without submodule recursion.
+  JUCE_TAG: 8.0.15
+
+jobs:
+  native:
+    name: ${{ matrix.platform }} native build and CTest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - platform: linux-x86_64
+            runner: ubuntu-24.04
+          - platform: windows-x64
+            runner: windows-2022
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.13.16'
+      - name: Linux JUCE development libraries and headless display
+        if: matrix.platform == 'linux-x86_64'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ninja-build xvfb xauth libasound2-dev libjack-jackd2-dev libfreetype6-dev libx11-dev libxcomposite-dev libxcursor-dev libxinerama-dev libxrandr-dev libxrender-dev libgl1-mesa-dev libglu1-mesa-dev libgtk-3-dev pkg-config
+      - name: Pin JUCE and install build-time Python requirement
+        run: |
+          set -euo pipefail
+          mkdir -p build/deps
+          git -c core.autocrlf=false clone --no-checkout --depth 1 --branch "$JUCE_TAG" https://github.com/juce-framework/JUCE.git build/deps/JUCE
+          git -C build/deps/JUCE config core.autocrlf false
+          git -C build/deps/JUCE checkout --detach "$JUCE_REV"
+          test "$(git -C build/deps/JUCE rev-parse HEAD)" = "$JUCE_REV"
+          if [[ '${{ matrix.platform }}' == windows-x64 ]]; then
+            python -m venv build/ci-venv
+            build/ci-venv/Scripts/python.exe -m pip install --require-hashes --only-binary=:all: -r requirements-ci.txt
+          else
+            python3 -m venv build/ci-venv
+            build/ci-venv/bin/python -m pip install --require-hashes --only-binary=:all: -r requirements-ci.txt
+          fi
+      - name: Configure and build actual plugin and native checks
+        run: |
+          set -euo pipefail
+          mkdir -p build
+          if [[ '${{ matrix.platform }}' == windows-x64 ]]; then
+            cmake -S . -B build/ci-release -G 'Visual Studio 17 2022' -A x64 -DJUCE_ROOT="$PWD/build/deps/JUCE" -DPython3_EXECUTABLE="$PWD/build/ci-venv/Scripts/python.exe"
+          else
+            cmake -S . -B build/ci-release -G Ninja -DCMAKE_BUILD_TYPE=Release -DJUCE_ROOT="$PWD/build/deps/JUCE" -DPython3_EXECUTABLE="$PWD/build/ci-venv/bin/python"
+          fi
+          cmake --build build/ci-release --config Release --target GardenEcho_VST3 EchoChecks EffectCoreChecks StateMigrationChecks --parallel 2
+      - name: Native CTest, bundle and architecture checks
+        run: |
+          set -euo pipefail
+          {
+            echo "source=$GITHUB_SHA platform=${{ matrix.platform }} juce=$JUCE_REV"
+            cmake --version | head -1
+            if [[ '${{ matrix.platform }}' == linux-x86_64 ]]; then
+              xvfb-run -a ctest --test-dir build/ci-release -C Release --no-tests=error --output-on-failure
+            else
+              ctest --test-dir build/ci-release -C Release --no-tests=error --output-on-failure
+            fi
+          } 2>&1 | tee build/test-results.txt
+          python scripts/sanitize_ci_evidence.py build/test-results.txt
+          bundle='build/ci-release/GardenEcho_artefacts/Release/VST3/Garden Echo.vst3'
+          test -d "$bundle"
+          if [[ '${{ matrix.platform }}' == linux-x86_64 ]]; then
+            module="$bundle/Contents/x86_64-linux/Garden Echo.so"
+            test -f "$module"
+            file "$module" | tee -a build/test-results.txt
+            file "$module" | grep -q 'ELF 64-bit.*x86-64'
+          else
+            module="$bundle/Contents/x86_64-win/Garden Echo.vst3"
+            test -f "$module"
+            python - "$module" <<'PY' | tee -a build/test-results.txt
+          import pathlib, struct, sys
+          data = pathlib.Path(sys.argv[1]).read_bytes()[:256]
+          assert data[:2] == b'MZ'
+          offset = struct.unpack_from('<I', data, 0x3c)[0]
+          with open(sys.argv[1], 'rb') as f:
+              f.seek(offset)
+              assert f.read(6) == b'PE\0\0\x64\x86', 'expected x64 PE machine'
+          print('PE machine: x86_64')
+          PY
+          fi
+          python scripts/sanitize_ci_evidence.py build/test-results.txt
+      - name: Source and packaging regression tests
+        run: |
+          set -euo pipefail
+          if [[ '${{ matrix.platform }}' == windows-x64 ]]; then PYTHON=build/ci-venv/Scripts/python.exe; else PYTHON=build/ci-venv/bin/python; fi
+          "$PYTHON" -m unittest discover -s scripts -p 'test_*.py' -q
+          "$PYTHON" scripts/verify_ship_inventory.py
+      - name: Actual native VST3 pluginval strictness 5
+        run: |
+          set -euo pipefail
+          python scripts/fetch_pluginval.py --platform '${{ matrix.platform }}' > build/pluginval-path.txt
+          tool="$(cat build/pluginval-path.txt)"
+          bundle='build/ci-release/GardenEcho_artefacts/Release/VST3/Garden Echo.vst3'
+          if [[ '${{ matrix.platform }}' == linux-x86_64 ]]; then
+            xvfb-run -a "$tool" --strictness-level 5 --validate "$bundle" 2>&1 | tee -a build/test-results.txt
+          else
+            "$tool" --strictness-level 5 --validate "$bundle" 2>&1 | tee -a build/test-results.txt
+          fi
+          python scripts/sanitize_ci_evidence.py build/test-results.txt
+      - name: Package complete bundle and corresponding source
+        run: |
+          set -euo pipefail
+          mkdir -p dist
+          if [[ '${{ matrix.platform }}' == windows-x64 ]]; then PYTHON=python; else PYTHON=python3; fi
+          "$PYTHON" scripts/package_native_release.py \
+            --bundle 'build/ci-release/GardenEcho_artefacts/Release/VST3/Garden Echo.vst3' \
+            --platform '${{ matrix.platform }}' --out dist --source-commit "$GITHUB_SHA" \
+            --juce-root build/deps/JUCE --test-report build/test-results.txt
+          binary='dist/Garden-Echo-0.2.0-rc.1-${{ matrix.platform }}.zip'
+          "$PYTHON" scripts/verify_native_package.py --binary "$binary" \
+            --source "${binary%.zip}-source.zip" --repo . --juce-root build/deps/JUCE
+      - name: Upload validated candidate
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: candidate-${{ matrix.platform }}
+          path: dist/
+          if-no-files-found: error
+      - name: Upload failure diagnostics (not a candidate)
+        if: failure()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: failure-${{ matrix.platform }}
+          path: |
+            build/test-results.txt
+            build/ci-release/Testing/Temporary/LastTest.log
+          if-no-files-found: ignore
+
+  mac-build:
+    name: macOS universal build and Apple silicon CTest
+    runs-on: macos-15
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.13.16'
+      - name: Pin JUCE and build-time Python requirement
+        run: |
+          set -euo pipefail
+          mkdir -p build/deps
+          git -c core.autocrlf=false clone --no-checkout --depth 1 --branch "$JUCE_TAG" https://github.com/juce-framework/JUCE.git build/deps/JUCE
+          git -C build/deps/JUCE config core.autocrlf false
+          git -C build/deps/JUCE checkout --detach "$JUCE_REV"
+          test "$(git -C build/deps/JUCE rev-parse HEAD)" = "$JUCE_REV"
+          python3 -m venv build/ci-venv
+          build/ci-venv/bin/python -m pip install --require-hashes --only-binary=:all: -r requirements-ci.txt
+      - name: Build both universal slices and test on Apple silicon
+        run: |
+          set -euo pipefail
+          test "$(uname -m)" = arm64
+          cmake -S . -B build/ci-release -G Xcode -DJUCE_ROOT="$PWD/build/deps/JUCE" \
+            -DPython3_EXECUTABLE="$PWD/build/ci-venv/bin/python" \
+            -DCMAKE_OSX_ARCHITECTURES='arm64;x86_64' -DCMAKE_OSX_DEPLOYMENT_TARGET=11.0
+          cmake --build build/ci-release --config Release --target GardenEcho_VST3 EchoChecks EffectCoreChecks StateMigrationChecks --parallel 2
+          {
+            echo "source=$GITHUB_SHA platform=macos-universal juce=$JUCE_REV builder=$(uname -m)"
+            xcodebuild -version
+            ctest --test-dir build/ci-release -C Release --no-tests=error --output-on-failure
+          } 2>&1 | tee build/test-results.txt
+          python3 scripts/sanitize_ci_evidence.py build/test-results.txt
+          build/ci-venv/bin/python -m unittest discover -s scripts -p 'test_*.py' -q
+          build/ci-venv/bin/python scripts/verify_ship_inventory.py
+          python3 scripts/fetch_pluginval.py --platform macos-universal > build/pluginval-path.txt
+          "$(cat build/pluginval-path.txt)" --strictness-level 5 \
+            --validate 'build/ci-release/GardenEcho_artefacts/Release/VST3/Garden Echo.vst3' 2>&1 | tee -a build/test-results.txt
+          python3 scripts/sanitize_ci_evidence.py build/test-results.txt
+          bundle='build/ci-release/GardenEcho_artefacts/Release/VST3/Garden Echo.vst3'
+          module="$bundle/Contents/MacOS/Garden Echo"
+          test -f "$module"
+          for binary in "$module"; do
+            lipo -verify_arch arm64 x86_64 "$binary"
+            lipo -info "$binary" | tee -a build/test-results.txt
+          done
+          mkdir -p build/mac-transfer/tests
+          cp -R "$bundle" build/mac-transfer/
+          for name in EchoChecks EffectCoreChecks StateMigrationChecks; do
+            binary="$(find build/ci-release -type f -name "$name" -path '*/Release/*' -perm -111 -print -quit)"
+            test -n "$binary"
+            lipo -verify_arch arm64 x86_64 "$binary"
+            lipo -info "$binary" | tee -a build/test-results.txt
+            cp "$binary" build/mac-transfer/tests/
+          done
+          cp build/test-results.txt build/mac-transfer/apple-silicon-test-results.txt
+          tar -C build/mac-transfer -czf build/mac-transfer.tar.gz .
+          (cd build && shasum -a 256 mac-transfer.tar.gz) | tee build/mac-transfer.sha256
+      # Internal handoff only; this is NOT a candidate/release. Intel must run the transferred tests.
+      - name: Transfer universal bundle and native checks to Intel runner
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: mac-universal-internal-validation-input
+          path: |
+            build/mac-transfer.tar.gz
+            build/mac-transfer.sha256
+          if-no-files-found: error
+      - name: Upload failure diagnostics
+        if: failure()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: failure-macos-build
+          path: |
+            build/test-results.txt
+            build/ci-release/Testing/Temporary/LastTest.log
+          if-no-files-found: ignore
+
+  mac-intel:
+    name: Transferred universal binary CTest on Intel
+    needs: mac-build
+    runs-on: macos-15-intel
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: mac-universal-internal-validation-input
+          path: build
+      - name: Verify archive and execute exact transferred native binaries via CTest
+        run: |
+          set -euo pipefail
+          test "$(uname -m)" = x86_64
+          (cd build && shasum -a 256 -c mac-transfer.sha256)
+          mkdir -p build/mac-intel build/intel-ctest
+          tar -C build/mac-intel -xzf build/mac-transfer.tar.gz
+          lipo -verify_arch arm64 x86_64 'build/mac-intel/Garden Echo.vst3/Contents/MacOS/Garden Echo'
+          for name in EchoChecks EffectCoreChecks StateMigrationChecks; do
+            binary="$PWD/build/mac-intel/tests/$name"
+            test -x "$binary"
+            lipo -verify_arch arm64 x86_64 "$binary"
+            printf 'add_test(%s "%s")\n' "$name" "$binary" >> build/intel-ctest/CTestTestfile.cmake
+          done
+          {
+            echo "source=$GITHUB_SHA platform=macos-universal validator=$(uname -m)"
+            ctest --test-dir build/intel-ctest --no-tests=error --output-on-failure
+          } 2>&1 | tee build/intel-test-results.txt
+          python3 scripts/sanitize_ci_evidence.py build/intel-test-results.txt
+          python3 scripts/fetch_pluginval.py --platform macos-universal > build/pluginval-path.txt
+          "$(cat build/pluginval-path.txt)" --strictness-level 5 \
+            --validate 'build/mac-intel/Garden Echo.vst3' 2>&1 | tee -a build/intel-test-results.txt
+          python3 scripts/sanitize_ci_evidence.py build/intel-test-results.txt
+      - name: Transfer Intel test receipt
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: mac-intel-test-receipt
+          path: build/intel-test-results.txt
+          if-no-files-found: error
+      - name: Upload Intel failure diagnostics
+        if: failure()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: failure-macos-intel
+          path: |
+            build/intel-test-results.txt
+            build/intel-ctest/Testing/Temporary/LastTest.log
+          if-no-files-found: ignore
+
+  mac-package:
+    name: Package only after both macOS architectures pass
+    needs: mac-intel
+    runs-on: macos-15
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.13.16'
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: mac-universal-internal-validation-input
+          path: build
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: mac-intel-test-receipt
+          path: build
+      - name: Verify transfer and package complete universal bundle
+        run: |
+          set -euo pipefail
+          (cd build && shasum -a 256 -c mac-transfer.sha256)
+          mkdir -p build/mac-package
+          tar -C build/mac-package -xzf build/mac-transfer.tar.gz
+          bundle='build/mac-package/Garden Echo.vst3'
+          lipo -verify_arch arm64 x86_64 "$bundle/Contents/MacOS/Garden Echo"
+          cat build/mac-package/apple-silicon-test-results.txt build/intel-test-results.txt > build/test-results.txt
+          mkdir -p build/deps
+          git -c core.autocrlf=false clone --no-checkout --depth 1 --branch "$JUCE_TAG" https://github.com/juce-framework/JUCE.git build/deps/JUCE
+          git -C build/deps/JUCE config core.autocrlf false
+          git -C build/deps/JUCE checkout --detach "$JUCE_REV"
+          test "$(git -C build/deps/JUCE rev-parse HEAD)" = "$JUCE_REV"
+          mkdir -p dist
+          python3 scripts/package_native_release.py --bundle "$bundle" --platform macos-universal \
+            --out dist --source-commit "$GITHUB_SHA" --juce-root build/deps/JUCE \
+            --test-report build/test-results.txt
+          binary="dist/Garden-Echo-0.2.0-rc.1-macos-universal.zip"
+          python3 scripts/verify_native_package.py --binary "$binary" \
+            --source "${binary%.zip}-source.zip" --repo . --juce-root build/deps/JUCE
+      - name: Upload validated candidate
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: candidate-macos-universal
+          path: dist/
+          if-no-files-found: error
+      - name: Upload packaging failure diagnostics
+        if: failure()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: failure-macos-package
+          path: build/test-results.txt
+          if-no-files-found: ignore
